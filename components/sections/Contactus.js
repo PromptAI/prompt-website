@@ -160,7 +160,6 @@ export default function Contactus({ appOrigin, locale }) {
                   <>{errors.content && errors.content.message}</>
                 </span>
               </div>
-
               <div tw="flex justify-end items-center">
                 {status === STATUS.ERROR && (
                   <span tw="mr-4 font-serif text-white bg-red-500 p-2 leading-none flex justify-center items-center rounded"></span>
