@@ -17,7 +17,6 @@ export default function Banner({ appOrigin, locale }) {
           <h1 tw="[font-weight: 500] whitespace-pre-wrap text-white leading-snug">
             {t`banner.title`}
           </h1>
-          <p>{t`banner.description`}</p>
           <p>{t`banner.description.extends`}</p>
           <div>
             <Link
