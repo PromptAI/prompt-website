@@ -13,6 +13,7 @@ const style = {
   headerBasic: [
     tw`fixed w-full transition-all z-10`,
     css`
+      ${tw`bg-white`}
       @media screen and (max-width: 640px) {
         &:hover {
           ${tw`bg-white`}
@@ -32,10 +33,10 @@ const style = {
       }
 
       h1 {
-        ${tw`text-gray-100`}
+        ${tw`text-gray-900`}
       }
       i {
-        ${tw`text-gray-300`}
+        ${tw`text-gray-600`}
       }
     `,
     tw`sm:hover:bg-transparent`,
@@ -44,6 +45,7 @@ const style = {
     tw`bg-gray-50!`,
     css`
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      ${tw`border-b`}
       h1 {
         ${tw`text-gray-900`}
       }
@@ -62,7 +64,7 @@ const style = {
     css`
       a,
       li {
-        ${tw`text-gray-200`}
+        ${tw`text-gray-800`}
       }
       li {
         ${tw`py-3 w-full text-center hover:(bg-gray-100 text-blue-500 underline)`}

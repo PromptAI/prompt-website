@@ -4,19 +4,20 @@ import useTranslate from "~/hooks/useTranslate";
 
 const style = {
   features: [
-    tw`flex flex-col text-center`,
+    tw`flex flex-col text-center gap-4 px-4`,
     tw`xl:(flex-row text-left)`,
     css`
       h3 {
-        ${tw`text-gray-700 mb-8`}
+        ${tw`text-gray-700 mb-8 text-center`}
         span {
-          ${tw`border-b-2 border-b-blue-600 px-2`}
+          ${tw`px-2`}
           ${tw`xl:(pl-0)`}
         }
       }
       li {
         ${tw`p-6`}
         ${tw`xl:w-1/4`}
+        ${tw`shadow-xl rounded-md shadow-gray-400`}
       }
     `,
   ],
@@ -27,8 +28,7 @@ export default function Feature() {
   return (
     <section>
       <Container tw="flex flex-row justify-center flex-wrap items-center py-10 pb-20">
-        <h2 tw="text-center">{t`feature.title`}</h2>
-        <ul css={[style.features]}>
+        <ul css={[style.features]} className="">
           <li>
             <h3>
               <span>{t`feature.1.title`}</span>

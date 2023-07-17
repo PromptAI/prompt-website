@@ -37,9 +37,9 @@ const VideoColumn = ({ children }) => (
 const videos = {
   en: {
     conversation: "conversation.mov",
-    form: "form.mov",
-    customizing: "customizing.mov",
-    llm: "llm.mov",
+    form: "formv2.mp4",
+    customizing: "debugv2.mp4",
+    llm: "chatgptv2.mp4",
   },
   zh: {
     conversation: "conversation.mov",
@@ -66,12 +66,6 @@ export default function Banner({ docOrigin, deployType }) {
         deployType === "normarl"
           ? `${docOrigin}/docs/${locale}/example/slot/`
           : `${docOrigin}/docs/example/slot/`,
-      ],
-      [
-        "conversation",
-        deployType === "normarl"
-          ? `${docOrigin}/docs/${locale}/example/faq-flow/`
-          : `${docOrigin}/docs/example/faq-flow/`,
       ],
     ],
     [deployType, docOrigin, locale]
