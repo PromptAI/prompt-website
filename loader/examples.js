@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const pcVideos = ["IT-Helpdesk-R1.mov"];
+const pcVideos = ["IT-Helpdesk-R1.mp4"];
 export async function getExamples(locale = "zh") {
   return new Promise((resolve, reject) => {
     fs.readdir(`./public/examples/${locale}`, (err, files) => {
