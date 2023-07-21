@@ -65,7 +65,7 @@ export default function Banner({ docOrigin, deployType }) {
         "customizing",
         deployType === "normarl"
           ? `${docOrigin}/docs/${locale}/example/slot/`
-          : `${docOrigin}/docs/example/slot/`,
+          : `${docOrigin}/docs/overview/#step-4---train-and-run`,
       ],
     ],
     [deployType, docOrigin, locale]
