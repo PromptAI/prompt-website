@@ -36,16 +36,14 @@ const VideoColumn = ({ children }) => (
 
 const videos = {
   en: {
-    conversation: "conversation.mov",
     form: "formv2.mp4",
     customizing: "debugv2.mp4",
     llm: "chatgptv2.mp4",
   },
   zh: {
-    conversation: "conversation.mov",
     form: "form.mp4",
-    customizing: "customizing.mov",
-    llm: "llm.mov",
+    customizing: "customizing.mp4",
+    llm: "llm.mp4",
   },
 };
 
