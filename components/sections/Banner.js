@@ -17,13 +17,13 @@ export default function Banner({ appOrigin, locale }) {
           <h1 tw="[font-weight: 500] whitespace-pre-wrap leading-snug">
             {t`banner.title`}
           </h1>
-          <p>{t`banner.description.extends`}</p>
+          <h2 tw="m-0">{t`banner.description.extends`}</h2>
           <div>
             <Link
               onMouseDown={() => track("applying")}
               href={`${appOrigin}/login`}
             >
-              <Button tw="mx-auto xl:mx-0 h-12 mt-8 w-52 text-2xl">
+              <Button tw="mx-auto xl:mx-0 h-12 mt-8 w-52 text-2xl rounded">
                 {t`nav.free2Use`}
               </Button>
             </Link>

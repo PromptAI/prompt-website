@@ -1,6 +1,5 @@
 import tw, { css } from "twin.macro";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Container from "~/components/Atoms/Container";
 import Button from "./Atoms/Button";
 import Link from "next/link";
@@ -151,7 +150,7 @@ export default function Header({
                 target="_blank"
                 href={`${appOrigin}/login`}
               >
-                <Button>{t`nav.free2Use`}</Button>
+                <Button tw="rounded">{t`nav.free2Use`}</Button>
               </Link>
             </li>
           </ul>
