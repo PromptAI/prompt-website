@@ -9,7 +9,7 @@
   "nav.term": "Term",
   "footer.title": "PROMPT AI",
   "footer.subtitle": "帮助与支持",
-  "footer.copyright": "ⓒ Copyright PROMPT AI. 浙ICP备2022024214号",
+  "footer.copyright": "ⓒ Copyright PROMPT AI.",
   "banner.title": "交互式对话AI",
   "banner.description": "PromptDialog 是为快速对话设计和部署⽽构建的⽆代码开发环境。它基于RASA，但⼜不需要特 定的RASA 知识来设计和部署聊天机器⼈。PromptDialog 使⽤⾃然语⾔来设计⾃然语⾔对话。它最⼤限度地减少了标注和编码⼯作，旨在⼏分钟内发布企业聊天机器⼈。 PromptDialog能使您的设计团队快速识别对话错误并改进您的设计。您也可免费下载⽣成的RASA源码⽂件， 私有部署。",
   "banner.description.extends": "我们在RASA基础上增加了对LLM的支持，可直接根据文本回答客户问题，减少10倍以上标注量，提高对话品质。 ",

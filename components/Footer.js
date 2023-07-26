@@ -15,7 +15,6 @@ const style = {
     `,
   ],
 };
-
 export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
   const track = useTrackEvent("link statistics", "click");
   const t = useTranslate();
@@ -73,24 +72,28 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
                   {t`nav.rasa`}
                 </Link>
               </li>
-              <li>
-                <Link
-                  target="_blank"
-                  onMouseDown={() => track("privacie")}
-                  href="/privacie.html"
-                >
-                  {t`nav.privacy`}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  onMouseDown={() => track("privacie")}
-                  href="/term.html"
-                >
-                  {t`nav.term`}
-                </Link>
-              </li>
+              {locale == "en" && (
+                <>
+                  <li>
+                    <Link
+                      target="_blank"
+                      onMouseDown={() => track("privacie")}
+                      href="/privacie.html"
+                    >
+                      {t`nav.privacy`}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      target="_blank"
+                      onMouseDown={() => track("privacie")}
+                      href="/term.html"
+                    >
+                      {t`nav.term`}
+                    </Link>
+                  </li>
+                </>
+              )}
               <li>
                 <Link
                   onMouseDown={() => track("contactus")}
@@ -101,13 +104,30 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
           </div>
           <div></div>
         </div>
-        <div tw="my-5">
+        <div tw="my-5 space-x-4">
           <a
             href={deployType === "normal" ? "https://beian.miit.gov.cn/" : "#"}
             tw="text-gray-500 text-sm"
           >
             {t`footer.copyright`}
           </a>
+          {locale === "zh" && (
+            <a
+              target="_blank"
+              href="https://beian.miit.gov.cn/#/Integrated/recordQuery"
+              rel="noreferrer"
+              tw="text-gray-500 text-sm"
+            >
+              <Image
+                alt="备案号"
+                src="/an.png"
+                width={14}
+                height={14}
+                tw="inline-block mr-1"
+              />
+              浙ICP备2022024214号
+            </a>
+          )}
         </div>
       </Container>
     </footer>
