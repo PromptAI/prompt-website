@@ -55,5 +55,6 @@
   "contactus.messageBody.required": "消息必填",
   "contactus.button.sending": "发送中...",
   "contactus.button.text": "发 送",
-  "release.detail": "点击查看详情:"
+  "release.detail": "点击查看详情:",
+  "nav.about": "关于我们"
 }

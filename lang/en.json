@@ -22,8 +22,8 @@
   "introduction.part.form.description": "Whether you want to collect information or prepare a third-party API call, our no-code flow editor allows you to implement complex business flows with fine grained controls. ",
   "introduction.part.form.link": "Learn more FORMS",
   "introduction.part.customizing.subtitle": "DEVOPS for CHATBOTS",
-  "introduction.part.customizing.title": "Provide All-in-One Chatbot Platform",
-  "introduction.part.customizing.description": "We provide all-in-one Devops: Design, develop and operate chatbots in one platform, on-premise or cloud.",
+  "introduction.part.customizing.title": "Provide All-in-one Chatbot Platform",
+  "introduction.part.customizing.description": "We provide All-in-one Devops: Design, develop and operate chatbots in one platform, on-premise or cloud.",
   "introduction.part.customizing.link": "Learn more customizing",
   "introduction.part.llm.title": "Turn Customer Data into Knowledge Bases",
   "introduction.part.llm.description": "If you have unstructured data that might be useful to answer customer questions, we provide one-click access to you data, indexed and queried by GPT technology. ",
@@ -47,7 +47,7 @@
   "feature.bottom.title": "The first cloud version will be followed by a local deployment version. If you have any suggestions, please contact us.",
   "feature.1.title": "No code programming",
   "feature.1.description": "You can design a dialogue system directly without knowing programming. Our no-code dialogue editor allows you to implement complex information collection and/or business logics using fine-grained conditions and input validation. It provides automatically generated RASA codes for learning and customization.",
-  "feature.2.title": "All-In-One Chatbot DepOps",
+  "feature.2.title": "All-in-one Chatbot DevOps",
   "feature.2.description": "Entities, intents, slots (variables) and dialog flows are fully displayed in the same integrated development environment (IDE). Different dialogue modules can be combined at will and released with one click. It provides Web/Mobile modes for publishing. Just copy a few lines of code to have the conversation capability in your applications.",
   "feature.3.title": "Predefined entities and intents",
   "feature.3.description": "Provide various predefined entities and intents to facilitate rapid development.",
@@ -67,5 +67,6 @@
   "contactus.messageBody.required": "Message is required!",
   "contactus.button.sending": "Sending ...",
   "contactus.button.text": "Send",
-  "release.detail": "Click for details:"
+  "release.detail": "Click for details:",
+  "nav.about": "About"
 }
