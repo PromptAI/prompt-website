@@ -40,7 +40,7 @@
   "examples.Financial-R1.mp4.link": "https://blog.rasa.com/rasa-financial-services-example",
   "examples.Financial-R1.mp4.link.src": "https://blog.rasa.com/rasa-financial-services-example/",
   "examples.IT-Helpdesk-R1.mp4.title": "IT Helpdesk Starter Pack",
-  "examples.IT-Helpdesk-R1.mp4.description": "The IT Helpdesk demo bot can open an incident report via a Service Now integration. This assistant is a great starting point for building an IT helpdesk chatbot of your own, or you can use it as a reference for integrating a customer service ticketing system.",
+  "examples.IT-Helpdesk-R1.mp4.description": "The IT Helpdesk demo bot can create an incident ticket. This assistant is a great starting point for building an IT helpdesk chatbot of your own, or you can use it as a reference for integrating a customer service ticketing system.",
   "examples.IT-Helpdesk-R1.mp4.link": "https://rasa.community/showcase/helpdesk-demo",
   "examples.IT-Helpdesk-R1.mp4.link.src": "https://rasa.community/showcase/helpdesk-demo/",
   "feature.title": "————————",
