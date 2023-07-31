@@ -78,7 +78,7 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
                     <Link
                       target="_blank"
                       onMouseDown={() => track("privacie")}
-                      href="/privacie.html"
+                      href="https://www.promptai.us/privacy.html"
                     >
                       {t`nav.privacy`}
                     </Link>
