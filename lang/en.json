@@ -12,7 +12,7 @@
   "footer.subtitle": "HELP AND SUPPORT",
   "footer.copyright": "ⓒ Copyright PROMPT AI.",
   "banner.title": "PromptDialog: AI Assitants with A Few Clicks",
-  "banner.description.extends": "DevOps for RASA and GPT4",
+  "banner.description.extends": "IDE & DevOps for RASA and GPT4",
   "introduction.part.conversation.subtitle": "VISUAL CONVERSATION EDITOR",
   "introduction.part.conversation.title": "Design and implement your conversations at once",
   "introduction.part.conversation.description": "Create natural dialogue flows in our intuitive conversation based interface. Add natural language examples on the fly, create rich responses with buttons, images, and Webhook. Let engineers focus on systems and API integration.",
