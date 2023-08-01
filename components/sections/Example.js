@@ -37,46 +37,59 @@ const VedioItem = ({ filename, locale, t, ...rest }) => (
 export default function Example({ value = [], locale }) {
   const t = useTranslate();
   return (
-    <Container tw="flex flex-col justify-center items-center pb-10">
-      <ul tw="flex flex-col mx-10">
-        {value
-          .filter((v) => v.pc)
-          .map((e) => (
-            <VedioItem
-              filename={e.filename}
-              locale={locale}
-              key={e.filename}
-              t={t}
-            />
-          ))}
-      </ul>
-      <ul tw="flex flex-col mx-10 md:flex-row">
-        {value
-          .filter((v) => !v.pc)
-          .map((e) => (
-            <VedioItem
-              filename={e.filename}
-              locale={locale}
-              key={e.filename}
-              t={t}
-              border
-              tw="h-[720px] w-full p-1 bg-white"
-            />
-          ))}
-      </ul>
+    <Container tw="pb-10">
+      <div tw="mx-10">
+        <Item tw="mb-0">
+          <h2>{t`examples.page.title`}</h2>
+          <p>
+            {t`examples.page.subtitle`}
+            <a tw="underline" href="https://app.promptai.us/libs">
+              {t`examples.page.subtitle.link`}
+            </a>
+          </p>
+        </Item>
+      </div>
+      <div tw="flex flex-col justify-center items-center">
+        <ul tw="flex flex-col mx-10">
+          {value
+            .filter((v) => v.pc)
+            .map((e) => (
+              <VedioItem
+                filename={e.filename}
+                locale={locale}
+                key={e.filename}
+                t={t}
+              />
+            ))}
+        </ul>
+        <ul tw="flex flex-col mx-10 md:flex-row">
+          {value
+            .filter((v) => !v.pc)
+            .map((e) => (
+              <VedioItem
+                filename={e.filename}
+                locale={locale}
+                key={e.filename}
+                t={t}
+                border
+                tw="h-[720px] w-full p-1 bg-white"
+              />
+            ))}
+        </ul>
 
-      {locale === "zh" && (
-        <div tw="mt-10 text-center">
-          <h4>{t`examples.scanQRCode`}</h4>
-          <Image
-            tw="inline"
-            src="/more-example.png"
-            width={200}
-            height={200}
-            alt="more examples"
-          />
-        </div>
-      )}
+        {locale === "zh" && (
+          <div tw="mt-10 text-center">
+            <h4>{t`examples.scanQRCode`}</h4>
+            <Image
+              tw="inline"
+              src="/more-example.png"
+              width={200}
+              height={200}
+              alt="more examples"
+            />
+          </div>
+        )}
+      </div>
     </Container>
   );
 }

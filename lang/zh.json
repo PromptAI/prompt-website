@@ -56,5 +56,8 @@
   "contactus.button.sending": "发送中...",
   "contactus.button.text": "发 送",
   "release.detail": "点击查看详情:",
-  "nav.about": "关于我们"
+  "nav.about": "关于我们",
+  "examples.page.title": "Examples",
+  "examples.page.subtitle": "我们提供了以下三个例子，并且你登录后，可以更加方便的导入。",
+  "examples.page.subtitle.link": "导入"
 }

@@ -68,5 +68,8 @@
   "contactus.button.sending": "Sending ...",
   "contactus.button.text": "Send",
   "release.detail": "Click for details:",
-  "nav.about": "About"
+  "nav.about": "About",
+  "examples.page.title": "Examples",
+  "examples.page.subtitle": "我们提供了以下三个例子，并且你登录后，可以更加方便的",
+  "examples.page.subtitle.link": "快速开始。"
 }
