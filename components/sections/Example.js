@@ -5,7 +5,7 @@ import useTranslate from "~/hooks/useTranslate";
 import Video from "../Atoms/Video";
 import { FiArrowRight } from "react-icons/fi";
 
-const Item = tw.li`m-5 [flex-basis: calc(100% - 120px)] flex flex-col justify-between gap-2`;
+const Item = tw.li`m-5 [flex-basis: calc(100% - 120px)] flex flex-col justify-between gap-2 text-lg`;
 
 const VedioItem = ({ filename, locale, t, ...rest }) => (
   <Item>
