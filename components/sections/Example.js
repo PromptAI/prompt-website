@@ -43,7 +43,12 @@ export default function Example({ value = [], locale }) {
           <h2>{t`examples.page.title`}</h2>
           <p>
             {t`examples.page.subtitle`}
-            <a tw="underline" href="https://app.promptai.us/libs">
+            <a
+              tw="underline"
+              target="_blank"
+              href="https://app.promptai.us/libs"
+              rel="noreferrer"
+            >
               {t`examples.page.subtitle.link`}
             </a>
           </p>
