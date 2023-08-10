@@ -109,7 +109,9 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
             href={deployType === "normal" ? "https://beian.miit.gov.cn/" : "#"}
             tw="text-gray-500 text-sm"
           >
-            {t`footer.copyright`}
+            {t`footer.copyright.prefix`}
+            {new Date().getFullYear()}
+            {t`footer.copyright.subfix`}
           </a>
           {locale === "zh" && (
             <a
