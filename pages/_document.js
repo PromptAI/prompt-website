@@ -36,7 +36,7 @@ export default class AppDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html style={{ zoom: 0.8 }}>
         <Head>
           <style
             data-emotion-css={this.props.ids?.join(" ")}
