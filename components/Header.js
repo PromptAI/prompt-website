@@ -132,10 +132,10 @@ export default function Header({
             </li>
             <li>
               <Link
-                onMouseDown={() => track("study_rasa")}
+                onMouseDown={() => track("study_example")}
                 href={`/${locale}/examples`}
               >
-                {t`nav.rasa`}
+                {t`nav.example`}
               </Link>
             </li>
             <li>

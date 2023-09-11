@@ -29,7 +29,10 @@ export default function Banner({ appOrigin, locale }) {
             </Link>
           </div>
         </div>
-        <Video src={`/examples/en/IT-Helpdesk-R1.mp4`} tw="mt-8" />
+        <Video
+          src={`/examples/en/IT-Helpdesk-R1.mp4`}
+          tw="mt-8 shadow-2xl rounded-md shadow-gray-400 p-2"
+        />
       </Container>
     </section>
   );

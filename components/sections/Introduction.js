@@ -89,10 +89,7 @@ export default function Banner({ docOrigin, deployType }) {
           </TextColumn>
           <VideoColumn>
             <div tw="w-full bg-gray-200 flex">
-              <Video
-                src={`/videos/${locale}/${videos[locale][part]}`}
-                tw="w-full"
-              />
+              <Video src={`/videos/en/${videos["en"][part]}`} tw="w-full" />
             </div>
           </VideoColumn>
           {to && (

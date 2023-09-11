@@ -66,10 +66,10 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
               </li>
               <li>
                 <Link
-                  onMouseDown={() => track("study_rasa")}
+                  onMouseDown={() => track("study_example")}
                   href="/#IT-Helpdesk-R1"
                 >
-                  {t`nav.rasa`}
+                  {t`nav.example`}
                 </Link>
               </li>
               {locale == "en" && (
