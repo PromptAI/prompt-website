@@ -12,7 +12,7 @@
   "footer.copyright": "ⓒ PROMPT AI.",
   "footer.copyright.prefix": "ⓒ",
   "footer.copyright.subfix": " PROMPT AI.",
-  "banner.title": "PromptDialog: 只需点击几下即可启动AI助手",
+  "banner.title": "PromptDialog: 只需点击几下即可启动AI对话助手",
   "banner.description": "PromptDialog 是为快速对话设计和部署构建的⽆代码开发环境。它基于RASA，但⼜不需要特 定的RASA 知识来设计和部署聊天机器⼈。PromptDialog 使⽤⾃然语⾔来设计⾃然语⾔对话。它最⼤限度地减少了标注和编码⼯作，旨在⼏分钟内发布企业聊天机器⼈。 PromptDialog能使您的设计团队快速识别对话错误并改进您的设计。您也可免费下载⽣成的RASA源码⽂件， 私有部署。",
   "banner.description.extends": "Free IDE & DevOps for Rasa and 大语言模型",
   "introduction.part.conversation.subtitle": "可视化对话编辑器",
