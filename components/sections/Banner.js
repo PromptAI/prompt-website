@@ -17,7 +17,8 @@ export default function Banner({ appOrigin, locale }) {
           <h1 tw="[font-weight: 500] whitespace-pre-wrap leading-snug">
             {t`banner.title`}
           </h1>
-          <h2 tw="m-0">{t`banner.description.extends`}</h2>
+          <h2 tw="m-0">{t`banner.description`}</h2>
+          <h3>{t`banner.description.extends`}</h3>
           <div>
             <Link
               onMouseDown={() => track("applying")}
