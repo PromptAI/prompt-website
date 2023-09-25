@@ -74,5 +74,10 @@
   "nav.about": "About",
   "examples.page.title": "Examples",
   "examples.page.subtitle": "We provide the following three examples. After you log in, you can go to locate these three examples in project templates and ",
-  "examples.page.subtitle.link": "start quickly."
+  "examples.page.subtitle.link": "start quickly.",
+  "carousel.title": "Use Case",
+  "carousel.images.0": "Image Description",
+  "carousel.images.1": "Image Description",
+  "carousel.images.2": "Image Description",
+  "carousel.images.3": "Image Description"
 }

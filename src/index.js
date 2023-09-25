@@ -6,6 +6,7 @@ import Banner from "~/components/sections/Banner";
 import Case from "~/components/sections/Case";
 import Introduction from "~/components/sections/Introduction";
 import Feature from "~/components/sections/Feature";
+import Carousels from "../components/sections/Carousels";
 
 export default function Home({ cases, examples, ...rest }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ cases, examples, ...rest }) {
       <Header {...rest} />
       <Main>
         <Banner {...rest} />
+        <Carousels />
         {rest.deployType === "normal" && <Case value={cases} />}
         <Introduction {...rest} />
         <Feature />

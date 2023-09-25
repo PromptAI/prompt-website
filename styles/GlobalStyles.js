@@ -59,6 +59,9 @@ const customStyles = css`
   a {
     ${tw`hover:underline text-blue-600`}
   }
+  .carousel-slider {
+    ${tw`rounded-md shadow-2xl shadow-gray-400 overflow-hidden`}
+  }
 `;
 
 const GlobalStyles = () => (
