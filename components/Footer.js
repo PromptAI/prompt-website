@@ -24,9 +24,9 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
         <div tw="flex-1 min-h-0 flex justify-between items-stretch">
           <div tw="flex-col justify-between">
             <Link onMouseDown={() => track("home")} href="/">
-              <h1 tw="text-3xl text-white [line-height:4.2rem]">
+              <span tw="text-3xl text-white [line-height:4.2rem]">
                 {t`footer.title`}
-              </h1>
+              </span>
             </Link>
             {locale === "zh" && (
               <div>
@@ -41,7 +41,7 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
             )}
           </div>
           <div>
-            <h2 tw="text-lg text-white mb-0">{t`footer.subtitle`}</h2>
+            <p tw="text-lg text-white mb-0">{t`footer.subtitle`}</p>
             <Link
               tw="px-0.5"
               href={`mailto:${

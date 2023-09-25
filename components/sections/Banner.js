@@ -14,11 +14,11 @@ export default function Banner({ appOrigin, locale }) {
     <section tw="bg-cover bg-no-repeat [background-position-y: bottom] pt-[4.5rem] -mt-[4.5rem] [margin-left: -1px]">
       <Container tw="flex flex-col p-5 pt-10 pb-28 text-center text-lg">
         <div tw="flex-1 min-w-0 flex flex-col gap-2 px-5 pb-3">
-          <h1 tw="[font-weight: 500] whitespace-pre-wrap leading-snug">
+          <h2 tw="[font-weight: 500] whitespace-pre-wrap leading-snug">
             {t`banner.title`}
-          </h1>
+          </h2>
           <h2 tw="m-0">{t`banner.description`}</h2>
-          <h3>{t`banner.description.extends`}</h3>
+          <h2>{t`banner.description.extends`}</h2>
           <div>
             <Link
               onMouseDown={() => track("applying")}
