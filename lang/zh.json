@@ -59,12 +59,13 @@
   "contactus.button.text": "发 送",
   "release.detail": "点击查看详情:",
   "nav.about": "关于我们",
-  "examples.page.title": "Examples",
-  "examples.page.subtitle": "我们提供了以下三个例子，并且你登录后，可以更加方便的导入。",
+  "examples.page.title": "示例",
+  "examples.page.subtitle": "我们提供了以下三个例子，并且你登录后，可以更加方便的",
   "examples.page.subtitle.link": "导入",
   "carousel.title": "用户案例",
   "carousel.images.0": "Image Description",
   "carousel.images.1": "Image Description",
   "carousel.images.2": "Image Description",
-  "carousel.images.3": "Image Description"
+  "carousel.images.3": "Image Description",
+  "loading": "加载中..."
 }

@@ -1,100 +1,77 @@
-import tw from "twin.macro";
-import Image from "next/image";
+import tw, { css } from "twin.macro";
 import Container from "~/components/Atoms/Container";
 import useTranslate from "~/hooks/useTranslate";
-import Video from "../Atoms/Video";
-import { FiArrowRight } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { marked } from "marked";
+import Loading from "../Atoms/Loading";
 
-const Item = tw.li`m-5 [flex-basis: calc(100% - 120px)] flex flex-col justify-between gap-2 text-lg`;
-
-const VedioItem = ({ filename, locale, t, ...rest }) => (
-  <Item>
-    {locale === "en" && (
-      <div tw="flex flex-col justify-between mb-4">
-        <div>
-          <h4 id={filename.split(".")[0]}>{t`examples.${filename}.title`}</h4>
-          <div>{t`examples.${filename}.description`}</div>
-        </div>
-        <a
-          href={t`examples.${filename}.link.src`}
-          target="_blank"
-          rel="noreferrer"
-          tw="flex items-center gap-1 text-sm"
-        >
-          {t`examples.${filename}.link`}
-          <FiArrowRight />
-        </a>
+const MarkdownWithVedioItem = ({ filename, locale, layout, ...rest }) => {
+  const t = useTranslate();
+  const [state, setState] = useState({ loading: false, html: "" });
+  useEffect(() => {
+    (async () => {
+      setState({ loading: true, html: "" });
+      const res = await fetch(`/docs/${filename}.md`);
+      console.log(filename);
+      const text = await res.text();
+      setState({ loading: false, html: marked(text) });
+    })();
+  }, [filename]);
+  return (
+    <div
+      css={css(
+        tw`gap-2 p-2 border shadow-lg rounded-md`,
+        layout === "horizontal"
+          ? tw`grid grid-rows-2 grid-cols-1 lg:(grid-rows-1 grid-cols-3)`
+          : tw`flex flex-col`
+      )}
+    >
+      <div tw="col-span-2 rounded-md max-h-[48rem] bg-gray-50">
+        {state.loading && <Loading tw="h-full">{t`loading`}</Loading>}
+        {state.html && (
+          <article
+            dangerouslySetInnerHTML={{ __html: state.html }}
+            tw="h-full overflow-auto p-4"
+          />
+        )}
       </div>
-    )}
-    <Video
-      src={`/examples/${locale}/${filename}`}
-      tw="shadow-2xl rounded-md shadow-gray-400"
-      {...rest}
-    />
-  </Item>
-);
+      <video
+        muted
+        controls
+        autoPlay
+        src={`/examples/${locale}/${filename}`}
+        tw="w-full h-[48rem] object-fill shadow-2xl rounded-md shadow-gray-400 bg-gray-50"
+        {...rest}
+      />
+    </div>
+  );
+};
 
 export default function Example({ value = [], locale }) {
   const t = useTranslate();
   return (
-    <Container tw="pb-10">
-      <div tw="mx-10">
-        <Item tw="mb-0">
-          <h2>{t`examples.page.title`}</h2>
-          <p>
-            {t`examples.page.subtitle`}
-            <a
-              tw="underline"
-              target="_blank"
-              href="https://app.promptai.us/libs"
-              rel="noreferrer"
-            >
-              {t`examples.page.subtitle.link`}
-            </a>
-          </p>
-        </Item>
-      </div>
-      <div tw="flex flex-col justify-center items-center">
-        <ul tw="flex flex-col mx-10">
-          {value
-            .filter((v) => v.pc)
-            .map((e) => (
-              <VedioItem
-                filename={e.filename}
-                locale={locale}
-                key={e.filename}
-                t={t}
-              />
-            ))}
-        </ul>
-        <ul tw="flex flex-col mx-10 md:flex-row">
-          {value
-            .filter((v) => !v.pc)
-            .map((e) => (
-              <VedioItem
-                filename={e.filename}
-                locale={locale}
-                key={e.filename}
-                t={t}
-                border
-                tw="h-[720px] w-full p-1 bg-white"
-              />
-            ))}
-        </ul>
-
-        {locale === "zh" && (
-          <div tw="mt-10 text-center">
-            <h4>{t`examples.scanQRCode`}</h4>
-            <Image
-              tw="inline"
-              src="/more-example.png"
-              width={200}
-              height={200}
-              alt="more examples"
-            />
-          </div>
-        )}
-      </div>
+    <Container tw="px-4 pb-10 space-y-4">
+      <h2>{t`examples.page.title`}</h2>
+      <p>
+        {t`examples.page.subtitle`}
+        <a
+          tw="underline"
+          target="_blank"
+          href="https://app.promptai.us/libs"
+          rel="noreferrer"
+        >
+          {t`examples.page.subtitle.link`}
+        </a>
+      </p>
+      {value.map((e) => (
+        <MarkdownWithVedioItem
+          filename={e.filename}
+          locale={locale}
+          layout={e.pc ? "vertical" : "horizontal"}
+          key={e.filename}
+          t={t}
+        />
+      ))}
     </Container>
   );
 }

@@ -19,6 +19,9 @@ dependencies:
   eslint-config-next:
     specifier: 13.0.4
     version: 13.0.4(eslint@8.28.0)(typescript@5.0.4)
+  marked:
+    specifier: ^9.0.3
+    version: registry.npmmirror.com/marked@9.0.3
   next:
     specifier: 13.0.4
     version: 13.0.4(@babel/core@7.22.1)(babel-plugin-macros@3.1.0)(react-dom@18.2.0)(react@18.2.0)
@@ -3331,6 +3334,14 @@ packages:
     version: 5.1.1
     dependencies:
       yallist: registry.npmmirror.com/yallist@3.1.1
+
+  registry.npmmirror.com/marked@9.0.3:
+    resolution: {integrity: sha512-pI/k4nzBG1PEq1J3XFEHxVvjicfjl8rgaMaqclouGSMPhk7Q3Ejb2ZRxx/ZQOcQ1909HzVoWCFYq6oLgtL4BpQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/marked/-/marked-9.0.3.tgz}
+    name: marked
+    version: 9.0.3
+    engines: {node: '>= 16'}
+    hasBin: true
+    dev: false
 
   registry.npmmirror.com/ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz}

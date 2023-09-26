@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "APP_DEPLOY_LANG=zh APP_DEPLOY_TYPE=alone APP_DOC_ORIGIN=https://doc.promptai.us APP_ORIGIN=https://app.promptai.us next dev",
+    "dev": "APP_DEPLOY_LANG=zh APP_DEPLOY_TYPE=alone APP_DOC_ORIGIN=https://doc.promptai.cn APP_ORIGIN=https://app.promptai.cn next dev",
     "build": "next build && next export",
     "build:zh": "APP_DEPLOY_LANG=zh APP_DEPLOY_TYPE=alone APP_DOC_ORIGIN=https://doc.promptai.cn APP_ORIGIN=https://app.promptai.cn next build && next export -o out-zh",
     "build:en": "APP_DEPLOY_LANG=en APP_DEPLOY_TYPE=alone APP_DOC_ORIGIN=https://doc.promptai.us APP_ORIGIN=https://app.promptai.us next build && next export -o out-en",
@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.10.5",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
+    "marked": "^9.0.3",
     "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
