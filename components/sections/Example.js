@@ -22,11 +22,11 @@ const MarkdownWithVedioItem = ({ filename, locale, layout, ...rest }) => {
       css={css(
         tw`gap-2 p-2 border shadow-lg rounded-md`,
         layout === "horizontal"
-          ? tw`grid grid-rows-2 grid-cols-1 lg:(grid-rows-1 grid-cols-3)`
+          ? tw`grid grid-rows-2 grid-cols-1 lg:(grid-rows-1 grid-cols-5)`
           : tw`flex flex-col`
       )}
     >
-      <div tw="col-span-2 rounded-md max-h-[48rem] bg-gray-50">
+      <div tw="col-span-3 rounded-md max-h-[48rem] bg-gray-50">
         {state.loading && <Loading tw="h-full">{t`loading`}</Loading>}
         {state.html && (
           <article
@@ -38,9 +38,8 @@ const MarkdownWithVedioItem = ({ filename, locale, layout, ...rest }) => {
       <video
         muted
         controls
-        autoPlay
         src={`/examples/${locale}/${filename}`}
-        tw="w-full h-[48rem] object-fill shadow-2xl rounded-md shadow-gray-400 bg-gray-50"
+        tw="w-full h-[48rem] object-fill shadow-2xl rounded-md shadow-gray-400 bg-gray-50 col-span-2"
         {...rest}
       />
     </div>
@@ -69,7 +68,6 @@ export default function Example({ value = [], locale }) {
           locale={locale}
           layout={e.pc ? "vertical" : "horizontal"}
           key={e.filename}
-          t={t}
         />
       ))}
     </Container>

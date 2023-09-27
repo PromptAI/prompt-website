@@ -62,6 +62,16 @@ const customStyles = css`
   .carousel-slider {
     ${tw`rounded-md shadow-2xl shadow-gray-400 overflow-hidden`}
   }
+  .dot {
+    ${tw`!bg-blue-600 !shadow-none !w-4 !h-4`}
+  }
+  .control-dots {
+    bottom: -28px !important;
+    margin: 0 !important;
+  }
+  .carousel-slider {
+    overflow: unset !important;
+  }
 `;
 
 const GlobalStyles = () => (
