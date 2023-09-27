@@ -66,7 +66,7 @@ const customStyles = css`
     ${tw`!bg-blue-600 !shadow-none !w-4 !h-4`}
   }
   .control-dots {
-    bottom: -28px !important;
+    bottom: -32px !important;
     margin: 0 !important;
   }
   .carousel-slider {
