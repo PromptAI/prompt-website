@@ -5,6 +5,7 @@ import Button from "../Atoms/Button";
 import useTranslate from "~/hooks/useTranslate";
 import useTrackEvent from "~/hooks/useTrackEvent";
 import Video from "../Atoms/Video";
+import CarouselVideios from "./CarouselVideos";
 
 export default function Banner({ appOrigin, locale }) {
   const track = useTrackEvent("link statistics", "click");
@@ -30,10 +31,13 @@ export default function Banner({ appOrigin, locale }) {
             </Link>
           </div>
         </div>
-        <Video
-          src={`/examples/en/IT-Helpdesk-R1.mp4`}
-          tw="mt-8 shadow-2xl rounded-md shadow-gray-400 p-2"
-        />
+        {locale === "zh" && (
+          <Video
+            src={`/examples/en/IT-Helpdesk-R1.mp4`}
+            tw="mt-8 shadow-2xl rounded-md shadow-gray-400 p-2"
+          />
+        )}
+        {locale === "en" && <CarouselVideios />}
       </Container>
     </section>
   );

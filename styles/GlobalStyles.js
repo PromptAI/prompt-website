@@ -59,6 +59,19 @@ const customStyles = css`
   a {
     ${tw`hover:underline text-blue-600`}
   }
+  .carousel-slider {
+    ${tw`rounded-md shadow-2xl shadow-gray-400 overflow-hidden`}
+  }
+  .dot {
+    ${tw`!bg-blue-600 !shadow-none !w-4 !h-4`}
+  }
+  .control-dots {
+    bottom: -32px !important;
+    margin: 0 !important;
+  }
+  .carousel-slider {
+    overflow: unset !important;
+  }
 `;
 
 const GlobalStyles = () => (
