@@ -123,8 +123,8 @@ export default function Header({
                 target="_blank"
                 href={
                   deployType === "normal"
-                    ? `${docOrigin}/docs/${locale}/about/`
-                    : `${docOrigin}/docs/about/`
+                    ? `${docOrigin}/docs/${locale}/overview/`
+                    : `${docOrigin}/docs/overview/`
                 }
               >
                 {t`nav.document`}
@@ -147,7 +147,7 @@ export default function Header({
             <li>
               <Link
                 onMouseDown={() => track("about")}
-                href={`${docOrigin}/docs/`}
+                href={`${docOrigin}/docs/about`}
                 target="_blank"
               >{t`nav.about`}</Link>
             </li>
