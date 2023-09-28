@@ -33,7 +33,7 @@ const CarouselVideios = () => {
         <Video key="youtube-1" url="/videos/en/index_1.mp4" />
         <Video key="youtube-2" url="/videos/en/index_2.mp4" />
       </Carousel>
-      <div tw="mt-8 h-16 text-xl font-medium" className="font-medium">
+      <div tw="mt-8 h-16 text-xl font-medium">
         <p>{t`carousel.description.${index}`}</p>
       </div>
     </>
