@@ -123,7 +123,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       core-js-pure: 3.26.1
-      regenerator-runtime: 0.13.11
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime@0.13.11
     dev: false
 
   /@babel/runtime@7.20.1:
@@ -626,7 +626,7 @@ packages:
     resolution: {integrity: sha512-o/HelwhuKpTj/frsOsbNLNgnNGVIFsVP/SW2BSF14gVl7kAfMOJ6/8wUAUvG1R1NHKrfG+2sHZTu0yauT1qBrA==}
     engines: {node: '>=6.0'}
     dependencies:
-      '@babel/runtime': 7.20.1
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.20.1
       '@babel/runtime-corejs3': 7.20.1
     dev: false
 
@@ -1141,7 +1141,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
     dependencies:
-      '@babel/runtime': 7.20.1
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.20.1
       aria-query: 4.2.2
       array-includes: 3.1.6
       ast-types-flow: 0.0.7
@@ -2927,6 +2927,15 @@ packages:
     dependencies:
       '@babel/types': registry.npmmirror.com/@babel/types@7.22.3
 
+  registry.npmmirror.com/@babel/runtime@7.20.1:
+    resolution: {integrity: sha512-mrzLkl6U9YLF8qpqI7TB82PESyEGjm/0Ly91jG575eVxMMlb8fYfOXFZIJ8XfLrJZQbm7dlKry2bJmXBUEkdFg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/runtime/-/runtime-7.20.1.tgz}
+    name: '@babel/runtime'
+    version: 7.20.1
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime@0.13.11
+    dev: false
+
   registry.npmmirror.com/@babel/template@7.21.9:
     resolution: {integrity: sha512-MK0X5k8NKOuWRamiEfc3KEJiHMTkGZNUjzMipqCGDDc6ijRl/B7RGSKVGncu4Ro/HdyzzY6cmoXuKI2Gffk7vQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/template/-/template-7.21.9.tgz}
     name: '@babel/template'
@@ -3430,6 +3439,12 @@ packages:
       classnames: registry.npmmirror.com/classnames@2.3.2
       prop-types: registry.npmmirror.com/prop-types@15.8.1
       react-easy-swipe: registry.npmmirror.com/react-easy-swipe@0.0.21
+    dev: false
+
+  registry.npmmirror.com/regenerator-runtime@0.13.11:
+    resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz}
+    name: regenerator-runtime
+    version: 0.13.11
     dev: false
 
   registry.npmmirror.com/semver@6.3.0:

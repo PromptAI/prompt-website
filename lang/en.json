@@ -82,6 +82,8 @@
   "carousel.images.2": "Image Description",
   "carousel.images.3": "Image Description",
   "loading": "Loading...",
-  "carousel.description.0": "Sales Assistant",
-  "carousel.description.1": "IT Helpdesk Bot"
+  "carousel.description.0": "Conversational UI",
+  "carousel.description.1": "Virtual Receptionist",
+  "carousel.description.2": "Sales Assistant",
+  "carousel.description.3": "IT Helpdesk Bot"
 }
