@@ -8,7 +8,6 @@ const Video = ({ url }, ref) => {
   return (
     <video
       ref={ref}
-      muted
       controls
       src={url}
       tw="w-full h-full object-fill rounded-md shadow-gray-400 bg-gray-50 p-1"
