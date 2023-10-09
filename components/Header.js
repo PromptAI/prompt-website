@@ -119,6 +119,14 @@ export default function Header({
           <ul css={[style.headerMenu]}>
             <li>
               <Link
+                onMouseDown={() => track("price")}
+                href={`/${locale}/pricing`}
+              >
+                {t`nav.price`}
+              </Link>
+            </li>
+            <li>
+              <Link
                 onMouseDown={() => track("document")}
                 target="_blank"
                 href={

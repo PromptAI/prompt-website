@@ -12,7 +12,6 @@ const MarkdownWithVedioItem = ({ filename, locale, layout, ...rest }) => {
     (async () => {
       setState({ loading: true, html: "" });
       const res = await fetch(`/docs/${filename}.md`);
-      console.log(filename);
       const text = await res.text();
       setState({ loading: false, html: marked(text) });
     })();
@@ -31,7 +30,7 @@ const MarkdownWithVedioItem = ({ filename, locale, layout, ...rest }) => {
         {state.html && (
           <article
             dangerouslySetInnerHTML={{ __html: state.html }}
-            tw="h-full overflow-auto p-4 text-xl"
+            tw="h-full overflow-auto p-4 text-xl font-sans prose prose-slate prose-headings:font-medium"
           />
         )}
       </div>
@@ -53,7 +52,7 @@ export default function Example({ value = [], locale }) {
   const t = useTranslate();
   return (
     <Container tw="px-4 pb-10 space-y-4">
-      <h2>{t`examples.page.title`}</h2>
+      <h2 tw="font-medium">{t`examples.page.title`}</h2>
       <p tw="text-xl">
         {t`examples.page.subtitle`}
         <a

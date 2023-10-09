@@ -2,6 +2,7 @@
   "title": "PromptAI - Conversational UI, Sales Assistant, Customre Service, School HelpDesk, Healthcare Support",
   "website.name": "PROMPT AI",
   "nav.logs": "Release",
+  "nav.price": "Pricing",
   "nav.document": "Documentation",
   "nav.example": "Examples",
   "nav.rasa": "Examples",

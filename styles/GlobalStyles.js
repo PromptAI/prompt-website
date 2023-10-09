@@ -2,6 +2,9 @@ import { Global, css } from "@emotion/react";
 import tw, { GlobalStyles as BaseStyles } from "twin.macro";
 
 const customStyles = css`
+  :root {
+    font-size: 14px;
+  }
   html {
     -webkit-overflow-scrolling: smoothing;
     -webkit-tap-highlight-color: transparent;
@@ -72,6 +75,12 @@ const customStyles = css`
   }
   .carousel-slider {
     overflow: unset !important;
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
 `;
 
