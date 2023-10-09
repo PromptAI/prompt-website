@@ -10,9 +10,15 @@ export const getStaticPaths = () => {
 
 export const getStaticProps = async () => {
   const locale = process.env.APP_DEPLOY_LANG || "en";
+  const appOrigin = process.env.APP_ORIGIN || "https://app.promptai.cn";
+  const docOrigin = process.env.APP_DOC_ORIGIN || "https://doc.promptai.cn";
+  const deployType = process.env.APP_DEPLOY_TYPE || "normal";
   return {
     props: {
       locale,
+      appOrigin,
+      docOrigin,
+      deployType,
     },
   };
 };

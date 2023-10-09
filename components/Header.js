@@ -161,7 +161,7 @@ export default function Header({
             </li>
             <li>
               <Link
-                onMouseDown={() => track("applying")}
+                onMouseDown={() => track("login")}
                 target="_blank"
                 href={`${appOrigin}/login`}
               >

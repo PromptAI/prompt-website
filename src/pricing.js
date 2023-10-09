@@ -13,7 +13,7 @@ export default function PricingPage(props) {
       </Head>
       <Header white {...props} />
       <Main>
-        <PricingSection />
+        <PricingSection {...props} />
       </Main>
       <Footer {...props} />
     </>
