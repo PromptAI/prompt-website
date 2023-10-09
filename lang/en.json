@@ -15,7 +15,7 @@
   "footer.copyright.prefix": "ⓒ ",
   "footer.copyright.subfix": " PROMPT AI.",
   "banner.title": "PromptDialog: AI Assistants with A Few Clicks",
-  "banner.description": "Free IDE & DevOps for Rasa and GPT4",
+  "banner.description": "Free IDE & DevOps for Rasa and LLMs (ChatGPT etc.)",
   "banner.description.extends": "Support multiple rounds of dialogue",
   "introduction.part.conversation.subtitle": "VISUAL CONVERSATION EDITOR",
   "introduction.part.conversation.title": "Design and implement your conversations at once",
