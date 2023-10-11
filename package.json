@@ -15,6 +15,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
+    "@radix-ui/react-tabs": "^1.0.4",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
     "marked": "^9.0.3",
