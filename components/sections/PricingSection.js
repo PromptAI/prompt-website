@@ -177,15 +177,6 @@ export default function PricingSection({ appOrigin, locale }) {
         </p>
         <p>
           <span tw="font-medium">(2)</span> {t`pricing.other.1`}
-          <a
-            tw="text-blue-600 ml-2 cursor-pointer underline"
-            href="https://talk2bits.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t`pricing.other.1.link.0`}
-          </a>
-          .
         </p>
       </div>
     </Container>
