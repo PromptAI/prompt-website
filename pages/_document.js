@@ -44,6 +44,11 @@ export default class AppDocument extends Document {
           />
         </Head>
         <script dangerouslySetInnerHTML={getAnalyticsTag()} />
+        <script
+          src="https://beamanalytics.b-cdn.net/beam.min.js"
+          data-token="6b5e52ca-458a-4262-8ab3-cd8e618d99ad"
+          async
+        ></script>
         <body>
           <Main />
           <NextScript />
