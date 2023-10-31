@@ -122,8 +122,8 @@ export default function PricingSection({ appOrigin, locale }) {
             >
               <Link
                 target="_blank"
-                href={`${appOrigin}/login`}
-                onMouseDown={() => track("login")}
+                href="https://github.com/PromptAI/promptdialog"
+                onMouseDown={() => track("download")}
               >
                 <Button tw="h-10 w-full rounded-md">{t`pricing.on-premises.0.button`}</Button>
               </Link>
