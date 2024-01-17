@@ -29,7 +29,7 @@ export default function Banner({ appOrigin, locale }) {
               <Link href="/en/pricing/premises" tw="text-black">
                 premises
               </Link>{" "}
-              (fully locale)
+              (fully local)
             </h2>
           )}
           <div>
