@@ -22,11 +22,17 @@ export default function Banner({ appOrigin, locale }) {
           {locale === "zh" && <h2 tw="m-0">{t`banner.description.extends`}</h2>}
           {locale === "en" && (
             <h2 tw="m-0">
-              <Link href="/en/pricing/on-cloud" tw="text-black">
+              <Link
+                href="/en/pricing/on-cloud"
+                tw="text-black underline underline-offset-[10px]"
+              >
                 on cloud
               </Link>{" "}
               or{" "}
-              <Link href="/en/pricing/premises" tw="text-black">
+              <Link
+                href="/en/pricing/premises"
+                tw="text-black underline underline-offset-[10px]"
+              >
                 premises
               </Link>{" "}
               (fully local)
