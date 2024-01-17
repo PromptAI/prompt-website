@@ -17,7 +17,7 @@
   "footer.copyright.subfix": " PROMPT AI.",
   "banner.title": "PromptDialog: AI Assistants with A Few Clicks",
   "banner.description": "Free Studio & DevOps for Rasa and LLMs (ChatGPT etc.)",
-  "banner.description.extends": "Support multiple rounds of dialogue",
+  "banner.description.extends": "on cloud or fully local",
   "introduction.part.conversation.subtitle": "VISUAL CONVERSATION EDITOR",
   "introduction.part.conversation.title": "Design and implement your conversations at once",
   "introduction.part.conversation.description": "Create natural dialogue flows in our intuitive conversation based interface. Add natural language examples on the fly, create rich responses with buttons, images, and Webhook. Let engineers focus on systems and API integration.",

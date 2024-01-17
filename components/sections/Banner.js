@@ -19,7 +19,19 @@ export default function Banner({ appOrigin, locale }) {
             {t`banner.title`}
           </h2>
           <h2 tw="m-0">{t`banner.description`}</h2>
-          {locale === "zh" && <h2>{t`banner.description.extends`}</h2>}
+          {locale === "zh" && <h2 tw="m-0">{t`banner.description.extends`}</h2>}
+          {locale === "en" && (
+            <h2 tw="m-0">
+              <Link href="/en/pricing/on-cloud" tw="text-black">
+                on cloud
+              </Link>{" "}
+              or{" "}
+              <Link href="/en/pricing/premises" tw="text-black">
+                premises
+              </Link>{" "}
+              (fully locale)
+            </h2>
+          )}
           <div>
             <Link
               onMouseDown={() => track("applying")}

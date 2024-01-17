@@ -70,7 +70,7 @@ const Content = (props) => (
 const buildItems = (length, prefix) =>
   new Array(length).fill(0).map((_, i) => `${prefix}.${i}`);
 
-export default function PricingSection({ appOrigin, locale }) {
+export default function PricingSection({ appOrigin, locale, defaultActive }) {
   const t = useTranslate();
   const track = useTrackEvent("link statistics", "click");
   const cloud = useMemo(
@@ -92,10 +92,16 @@ export default function PricingSection({ appOrigin, locale }) {
   return (
     <Container tw="px-4 pb-10 space-y-8">
       <h2 tw="mb-0 font-medium">Pricing</h2>
-      <Tabs defaultValue="cloud">
+      <Tabs defaultValue={defaultActive}>
         <TabsList tw="flex justify-center items-center gap-4">
-          <Trigger value="cloud">{t`pricing.cloud`}</Trigger>
-          <Trigger value="on-premises">{t`pricing.on-premises`}</Trigger>
+          <Trigger value="cloud" asChild>
+            <Link href={`/${locale}/pricing/on-cloud`}>{t`pricing.cloud`}</Link>
+          </Trigger>
+          <Trigger value="on-premises" asChild>
+            <Link
+              href={`/${locale}/pricing/premises`}
+            >{t`pricing.on-premises`}</Link>
+          </Trigger>
         </TabsList>
         <Content value="cloud">
           <PricingCard

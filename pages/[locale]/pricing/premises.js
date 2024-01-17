@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
 export default function LocaleHome(props) {
   return (
     <I18nProvider locale={props.locale}>
-      <PricingPage {...props} />
+      <PricingPage {...props} defaultActive="on-premises" />
     </I18nProvider>
   );
 }
