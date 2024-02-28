@@ -28,7 +28,7 @@ const PricingCard = ({
   const t = useTranslate();
   return (
     <div
-      tw="w-full md:max-w-md p-8 rounded-lg flex flex-col justify-between text-xl border shadow"
+      tw="w-full md:max-w-md px-8 py-4 rounded-lg flex flex-col text-xl border shadow"
       className={className}
     >
       <div tw="space-y-8">
@@ -49,7 +49,7 @@ const PricingCard = ({
           ))}
         </ul>
       </div>
-      <div tw="mt-6">{children}</div>
+      <div tw="mt-8">{children}</div>
     </div>
   );
 };
@@ -139,13 +139,16 @@ export default function PricingSection({ appOrigin, locale, defaultActive }) {
               items={premises1}
               money={t`pricing.on-premises.1.money.0`}
             >
-              <Link
-                target="_blank"
-                href={`${appOrigin}/login`}
-                onMouseDown={() => track("login")}
-              >
-                <Button tw="h-10 w-full rounded-md">{t`pricing.on-premises.1.button`}</Button>
-              </Link>
+              <div>
+                <Link
+                  target="_blank"
+                  href={`${appOrigin}/login`}
+                  onMouseDown={() => track("login")}
+                >
+                  <Button tw="h-10 w-full rounded-md">{t`pricing.on-premises.1.button`}</Button>
+                </Link>
+                <p tw="m-0 text-center mt-2 px-4">{t`pricing.professional.tip`}</p>
+              </div>
             </PricingCard>
             <PricingCard
               title={t`pricing.on-premises.2`}

@@ -119,5 +119,6 @@
   "pricing.on-premises.2.feature.2": "everything on-premises",
   "pricing.other.0": "Bot hosting: You need to host the bots in your own servers or cloud servers. Typical cloud server cost is: one AWS EC2 + EBS + network bandwidth, $200~300/virtual machine/month (estimation). We also provide hosting service with much lower cost. Please ",
   "pricing.other.0.link.0": "Contact us",
-  "pricing.other.1": "LLMs cost: use your own OpenAI key."
+  "pricing.other.1": "LLMs cost: use your own OpenAI key.",
+  "pricing.professional.tip": "If you need the rasa version, please let us know."
 }
