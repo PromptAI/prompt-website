@@ -74,7 +74,7 @@ export default function PricingSection({ appOrigin, locale, defaultActive }) {
   const t = useTranslate();
   const track = useTrackEvent("link statistics", "click");
   const cloud = useMemo(
-    () => buildItems(4, "pricing.cloud.feature").map((k) => t`${k}`),
+    () => buildItems(2, "pricing.cloud.feature").map((k) => t`${k}`),
     [t]
   );
   const premises0 = useMemo(
