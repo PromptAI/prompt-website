@@ -1,7 +1,7 @@
 import tw from "twin.macro";
-import { Carousel } from "react-responsive-carousel";
+import {Carousel} from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import useTranslate from "~/hooks/useTranslate";
 
 const Video = ({ url }, ref) => {

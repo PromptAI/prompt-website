@@ -6,6 +6,7 @@ import useTranslate from "~/hooks/useTranslate";
 import useTrackEvent from "~/hooks/useTrackEvent";
 import Video from "../Atoms/Video";
 import CarouselVideios from "./CarouselVideos";
+import Template from "~/components/sections/Template";
 
 export default function Banner({ appOrigin, locale }) {
   const track = useTrackEvent("link statistics", "click");
@@ -57,6 +58,9 @@ export default function Banner({ appOrigin, locale }) {
             />
           </div>
         )}
+
+        {/* Link to Prompt - AI templates */}
+        <Template/>
         {locale === "en" && <CarouselVideios />}
       </Container>
     </section>
