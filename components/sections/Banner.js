@@ -14,7 +14,7 @@ export default function Banner({ appOrigin, locale }) {
   const t = useTranslate();
   return (
     <section tw="bg-cover bg-no-repeat [background-position-y: bottom] pt-[4.5rem] -mt-[4.5rem] [margin-left: -1px]">
-      <Container tw="flex flex-col p-5 pt-10 pb-28 text-center text-lg">
+      <Container tw="flex flex-col p-5 pt-10 pb-10 text-center text-lg">
         <div tw="flex-1 min-w-0 flex flex-col gap-2 px-5 pb-3">
           <h2 tw="[font-weight: 500] whitespace-pre-wrap leading-snug text-5xl">
             {t`banner.title`}
@@ -61,7 +61,8 @@ export default function Banner({ appOrigin, locale }) {
 
         {/* Link to Prompt - AI templates */}
         <Template/>
-        {locale === "en" && <CarouselVideios />}
+        {/*暂时去掉视频*/}
+        {/*{locale === "en" && <CarouselVideios />}*/}
       </Container>
     </section>
   );
