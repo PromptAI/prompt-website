@@ -41,10 +41,10 @@ export default function Template({locale}) {
             url: "https://app.promptai.us/templates/p_dn1qvapxdxj4",
             image: "/images/web.svg"
         }, {
-            title: "GPT Survey",
+            title: "Survey",
             introduce: "The fastest way to create a conversational bot is providing a GPT prompt.",
             url: "https://app.promptai.us/templates/p_dn1t6ybs9iww",
-            image: "/images/GPT.svg"
+            image: "/images/survey.svg"
         }
     ]
     return <section>
