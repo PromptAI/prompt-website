@@ -30,11 +30,14 @@ const style = {
             ${tw`xl:w-1/3`}
             ${tw`shadow-xl rounded-lg shadow-gray-400`}
           }
+          ul {
+            ${tw`grid grid-cols-4 gap-4 justify-center`}
+          }
         `,
     ],
 };
 export default function Template({locale}) {
-    const data = [
+    const data1 = [
         {
             title: "Website Assistant",
             introduce: "Quickly build a website assistant using a Web (URL) and FAQ",
@@ -45,18 +48,46 @@ export default function Template({locale}) {
             introduce: "The fastest way to create a conversational bot is providing a GPT prompt.",
             url: "https://app.promptai.us/templates/p_dn1t6ybs9iww",
             image: "/images/survey.svg"
+        }, {
+            title: "ADHD",
+            introduce: "ADHD is a mental health condition that can cause unusual levels of hyperactivity and impulsive behaviors.",
+            url: "https://app.promptai.us/templates/p_dp0b7j29a39c",
+            image: "/images/health.svg"
+        }
+    ]
+    const data2 = [
+        {
+            title: "Website Assistant",
+            introduce: "Quickly build a website assistant using a Web (URL) and FAQ",
+            url: "https://app.promptai.us/templates/p_dn1qvapxdxj4",
+            image: "/images/web.svg"
+        }, {
+            title: "Survey",
+            introduce: "The fastest way to create a conversational bot is providing a GPT prompt.",
+            url: "https://app.promptai.us/templates/p_dn1t6ybs9iww",
+            image: "/images/survey.svg"
+        }, {
+            title: "Survey",
+            introduce: "The fastest way to create a conversational bot is providing a GPT prompt.",
+            url: "https://app.promptai.us/templates/p_dn1t6ybs9iww",
+            image: "/images/survey.svg"
+        }, {
+            title: "Survey",
+            introduce: "The fastest way to create a conversational bot is providing a GPT prompt.",
+            url: "https://app.promptai.us/templates/p_dn1t6ybs9iww",
+            image: "/images/survey.svg"
         }
     ]
     return <section>
-        <Container tw="flex flex-row justify-center flex-wrap items-center py-5 ">
-            <ul css={[style.templates]} className="flex flex-row justify-center ">
-                {data.map((item, index) => {
+        <Container >
+            <ul css={[style.templates]} className="grid grid-cols-4 gap-4 justify-center ">
+                {data1.map((item, index) => {
                     return <li key={index}
                                onMouseOver={() => {
-                                   document.getElementById(index + "").style.display = 'block';
+                                   document.getElementById(index + "-ul-1").style.display = 'block';
                                }}
                                onMouseOut={() => {
-                                   document.getElementById(index + "").style.display = 'none';
+                                   document.getElementById(index + "-ul-1").style.display = 'none';
                                }}
                                className={"rounded-lg"}
                                onClick={() => {
@@ -64,7 +95,7 @@ export default function Template({locale}) {
                                }}>
                         <div>
                             <Image src={item.image} alt={""}/>
-                            <Image id={index + ""}
+                            <Image id={index + "-ul-1"}
                                    style={{display: "none"}}
                                    src={"/images/openRightMini.svg"}
                                    alt={""}/>
@@ -76,6 +107,34 @@ export default function Template({locale}) {
                     </li>;
                 })}
             </ul>
+
+            {/*<ul css={[style.templates]} className="grid grid-cols-4 gap-4 justify-center ">*/}
+            {/*    {data2.map((item, index) => {*/}
+            {/*        return <li key={index}*/}
+            {/*                   onMouseOver={() => {*/}
+            {/*                       document.getElementById(index + "-ul-2").style.display = 'block';*/}
+            {/*                   }}*/}
+            {/*                   onMouseOut={() => {*/}
+            {/*                       document.getElementById(index + "-ul-2").style.display = 'none';*/}
+            {/*                   }}*/}
+            {/*                   className={"rounded-lg"}*/}
+            {/*                   onClick={() => {*/}
+            {/*                       window.open(item.url, "_blank")*/}
+            {/*                   }}>*/}
+            {/*            <div>*/}
+            {/*                <Image src={item.image} alt={""}/>*/}
+            {/*                <Image id={index + "-ul-2"}*/}
+            {/*                       style={{display: "none"}}*/}
+            {/*                       src={"/images/openRightMini.svg"}*/}
+            {/*                       alt={""}/>*/}
+            {/*            </div>*/}
+            {/*            <h3>*/}
+            {/*                <span>{item.title}</span>*/}
+            {/*            </h3>*/}
+            {/*            <p tw={"text-ellipsis"}>{item.introduce}</p>*/}
+            {/*        </li>;*/}
+            {/*    })}*/}
+            {/*</ul>*/}
         </Container>
     </section>;
 
