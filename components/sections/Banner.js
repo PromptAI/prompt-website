@@ -25,30 +25,29 @@ export default function Banner({ appOrigin, locale }) {
             <h2 tw="m-0">
               <Link
                 href="/en/pricing/on-cloud"
-                tw="text-black underline underline-offset-[10px]"
+                tw="text-black  text-orange-400"
               >
                 on cloud
               </Link>{" "}
               or{" "}
               <Link
                 href="/en/pricing/premises"
-                tw="text-black underline underline-offset-[10px]"
+                tw="text-black text-rose-400"
               >
                 premises
               </Link>{" "}
-              (fully local)
             </h2>
           )}
-          <div>
-            <Link
-              onMouseDown={() => track("applying")}
-              href={`${appOrigin}/login`}
-            >
-              <Button tw="mx-auto xl:mx-0 h-12 mt-8 w-52 text-2xl rounded">
-                {t`nav.free2Use`}
-              </Button>
-            </Link>
-          </div>
+          {/*<div>*/}
+          {/*  <Link*/}
+          {/*    onMouseDown={() => track("applying")}*/}
+          {/*    href={`${appOrigin}/login`}*/}
+          {/*  >*/}
+          {/*    <Button tw="mx-auto xl:mx-0 h-12 mt-8 w-52 text-2xl rounded">*/}
+          {/*      {t`nav.free2Use`}*/}
+          {/*    </Button>*/}
+          {/*  </Link>*/}
+          {/*</div>*/}
         </div>
         {locale === "zh" && (
           <div tw="w-3/4 mx-auto mt-8">
