@@ -39,38 +39,39 @@ const style = {
 export default function Template({locale}) {
     const data1 = [
         {
-            title: "Website Assistant",
-            introduce: "Quickly build a website assistant using a Web (URL) and FAQ",
-            url: "https://app.promptai.us/templates/p_dn1qvapxdxj4",
-            image: "/images/web.svg"
-        }, {
+            title: "Laws",
+            introduce: "Answer all questions about housing laws and regulations.",
+            url: "https://app.promptai.us/templates/p_dqcmq1jpj400",
+            image: "/images/house.svg"
+        }
+       , {
             title: "Survey",
             introduce: "The fastest way to create a conversational bot is providing a GPT prompt.",
             url: "https://app.promptai.us/templates/p_dn1t6ybs9iww",
             image: "/images/survey.svg"
         }, {
-            title: "ADHD",
-            introduce: "ADHD is a mental health condition that can cause unusual levels of hyperactivity and impulsive behaviors.",
-            url: "https://app.promptai.us/templates/p_dp0b7j29a39c",
-            image: "/images/health.svg"
-        }
+            title: "Ollama - Github",
+            introduce: "Chat with Ollama documentation.",
+            url: "https://app.promptai.us/templates/p_dq4q6b0ue22o",
+            image: "/images/ollama.svg"
+        },
     ]
     const data2 = [
         {
-            title: "WHO Health Topic",
-            introduce: "Quickly build a WHO health topic assistant using a Web (URL)",
+            title: "Website Assistant",
+            introduce: "Quickly build a website assistant using a Web (URL) and FAQ",
             url: "https://app.promptai.us/templates/p_dn1qvapxdxj4",
+            image: "/images/web.svg"
+        },{
+            title: "WHO Health Topic",
+            introduce: "Participate in discussions on WHO health topics.",
+            url: "https://app.promptai.us/templates/p_dq4p0kgl7itc",
             image: "/images/line-health.svg"
         }, {
-            title: "Ollama",
-            introduce: "Using inquiry as a replacement for referencing documents: a more efficient learning way.",
-            url: "https://app.promptai.us/templates/p_dq4q6b0ue22o",
-            image: "/images/ollama.svg"
-        }, {
-            title: "Survey",
-            introduce: " a streamlined tool designed to efficiently answer all your questions on housing laws and regulations.",
-            url: "https://app.promptai.us/templates/p_dqcmq1jpj400",
-            image: "/images/house.svg"
+            title: "ADHD",
+            introduce: "Learn more about ADHD.",
+            url: "https://app.promptai.us/templates/p_dp0b7j29a39c",
+            image: "/images/health.svg"
         }
     ]
     return <section>
