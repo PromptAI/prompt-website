@@ -51,7 +51,7 @@ export default function Template({locale}) {
             image: "/images/survey.svg"
         }, {
             title: "Ollama - Github",
-            introduce: "Chat with Ollama documentation.",
+            introduce: "How to use Ollama.",
             url: "https://app.promptai.us/templates/p_dq4q6b0ue22o",
             image: "/images/ollama.svg"
         },
@@ -59,17 +59,17 @@ export default function Template({locale}) {
     const data2 = [
         {
             title: "Website Assistant",
-            introduce: "Quickly build a website assistant using a Web (URL) and FAQ",
+            introduce: "PromptAI chatbot based on our website.",
             url: "https://app.promptai.us/templates/p_dn1qvapxdxj4",
             image: "/images/web.svg"
         },{
             title: "WHO Health Topic",
-            introduce: "Participate in discussions on WHO health topics.",
+            introduce: "All WHO health topics.",
             url: "https://app.promptai.us/templates/p_dq4p0kgl7itc",
             image: "/images/line-health.svg"
         }, {
             title: "ADHD",
-            introduce: "Learn more about ADHD.",
+            introduce: "Attention deficit hyperactivity disorder (ADHD)",
             url: "https://app.promptai.us/templates/p_dp0b7j29a39c",
             image: "/images/health.svg"
         }

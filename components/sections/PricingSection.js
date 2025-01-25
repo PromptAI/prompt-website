@@ -147,7 +147,7 @@ export default function PricingSection({ appOrigin, locale, defaultActive }) {
                 >
                   <Button tw="h-10 w-full rounded-md">{t`pricing.on-premises.1.button`}</Button>
                 </Link>
-                <p tw="m-0 text-center mt-2 px-4">{t`pricing.professional.tip`}</p>
+                {/*<p tw="m-0 text-center mt-2 px-4">{t`pricing.professional.tip`}</p>*/}
               </div>
             </PricingCard>
             <PricingCard

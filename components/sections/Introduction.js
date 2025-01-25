@@ -53,12 +53,12 @@ export default function Banner({ docOrigin, deployType }) {
   const introductionParts = useMemo(
     () => [
       ["llm"],
-      [
-        "form",
-        deployType === "normarl"
-          ? `${docOrigin}/docs/${locale}/example/form/`
-          : `${docOrigin}/docs/example/form/`,
-      ],
+      // [
+      //   "form",
+      //   deployType === "normarl"
+      //     ? `${docOrigin}/docs/${locale}/example/form/`
+      //     : `${docOrigin}/docs/example/form/`,
+      // ],
       [
         "customizing",
         deployType === "normarl"

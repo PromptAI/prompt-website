@@ -29,12 +29,12 @@ export default function Feature() {
     <section>
       <Container tw="flex flex-row justify-center flex-wrap items-center py-10 pb-20">
         <ul css={[style.features]} className="">
-          <li>
-            <h3>
-              <span>{t`feature.1.title`}</span>
-            </h3>
-            <div>{t`feature.1.description`}</div>
-          </li>
+          {/*<li>*/}
+          {/*  <h3>*/}
+          {/*    <span>{t`feature.1.title`}</span>*/}
+          {/*  </h3>*/}
+          {/*  <div>{t`feature.1.description`}</div>*/}
+          {/*</li>*/}
           <li>
             <h3>
               <span>{t`feature.2.title`}</span>
