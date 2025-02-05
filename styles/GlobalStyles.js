@@ -11,9 +11,7 @@ const customStyles = css`
   }
   html,
   body {
-    ${tw`font-sans`}
-    ${tw`antialiased`}
-    ${tw`text-gray-700`}
+    ${tw`font-sans antialiased bg-black text-white`}
   }
 
   @font-face {
@@ -39,7 +37,7 @@ const customStyles = css`
   h3,
   h4,
   h5 {
-    ${tw`text-gray-900 leading-normal`}
+    ${tw`text-white leading-normal`}
   }
 
   h1 {
@@ -56,18 +54,20 @@ const customStyles = css`
   }
 
   p {
-    ${tw`my-2`}
+    ${tw`my-2 text-gray-300`}
   }
 
   a {
-    ${tw`hover:underline text-blue-600`}
+    ${tw`hover:underline text-blue-400`}
   }
+  
   .carousel-slider {
-    ${tw`rounded-md shadow-2xl shadow-gray-400 overflow-hidden`}
+    ${tw`rounded-md shadow-2xl shadow-gray-800 overflow-hidden`}
   }
   .dot {
-    ${tw`!bg-blue-600 !shadow-none !w-4 !h-4`}
+    ${tw`!bg-blue-400 !shadow-none !w-4 !h-4`}
   }
+  
   .control-dots {
     top: -32px !important;
     bottom: unset !important;
@@ -90,5 +90,7 @@ const GlobalStyles = () => (
     <Global styles={customStyles} />
   </>
 );
+
+
 
 export default GlobalStyles;

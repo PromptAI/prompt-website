@@ -12,61 +12,61 @@ const style = {
   headerBasic: [
     tw`fixed w-full transition-all z-10`,
     css`
-      ${tw`bg-white`}
+      ${tw`bg-black`}
       @media screen and (max-width: 640px) {
         &:hover {
-          ${tw`bg-white`}
+          ${tw`bg-black`}
           nav {
             ${tw`block`}
             a,li {
-              ${tw`text-gray-800`}
+              ${tw`text-white`}
             }
           }
           h1 {
-            ${tw`text-gray-900`}
+            ${tw`text-white`}
           }
           i {
-            ${tw`text-gray-600`}
+            ${tw`text-gray-400`}
           }
         }
       }
 
       h1 {
-        ${tw`text-gray-900`}
+        ${tw`text-white`}
       }
       i {
-        ${tw`text-gray-600`}
+        ${tw`text-gray-400`}
       }
     `,
-    tw`sm:hover:bg-transparent`,
+    tw`sm:hover:bg-black`,
   ],
   headerFixed: [
-    tw`bg-gray-50!`,
+    tw`bg-black!`,
     css`
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      ${tw`border-b`}
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      ${tw`border-b border-gray-800`}
       h1 {
-        ${tw`text-gray-900`}
+        ${tw`text-white`}
       }
       i {
-        ${tw`text-gray-600`}
+        ${tw`text-gray-400`}
       }
       a,
       li {
-        ${tw`!text-gray-800`}
+        ${tw`!text-white`}
       }
     `,
   ],
   headerMenu: [
-    tw`flex flex-col items-center justify-center bg-gray-200 -mx-4`,
+    tw`flex flex-col items-center justify-center bg-gray-900 -mx-4`,
     tw`sm:(flex-row gap-2 bg-transparent mx-auto) md:gap-5`,
     css`
       a,
       li {
-        ${tw`text-gray-800`}
+        ${tw`text-white`}
       }
       li {
-        ${tw`py-3 w-full text-center hover:(bg-gray-100 text-blue-500 underline)`}
+        ${tw`py-3 w-full text-center hover:(bg-gray-800 text-blue-400 underline)`}
         ${tw`sm:(py-0 w-auto hover:bg-transparent)`}
       }
       a {
