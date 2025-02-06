@@ -4,6 +4,7 @@ import useTranslate from "~/hooks/useTranslate";
 import { useEffect, useState } from "react";
 import { marked } from "marked";
 import Loading from "../Atoms/Loading";
+import Template from "~/components/sections/Template";
 
 const MarkdownWithVedioItem = ({ filename, locale, layout, ...rest }) => {
   const t = useTranslate();
@@ -53,6 +54,7 @@ export default function Example({ value = [], locale }) {
   return (
     <Container tw="px-4 pb-10 space-y-4">
       <h2 tw="font-medium">{t`examples.page.title`}</h2>
+      <Template className={"mt-20"}/>
       <p tw="text-xl">
         {t`examples.page.subtitle`}
         <a

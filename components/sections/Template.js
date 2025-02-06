@@ -75,8 +75,8 @@ export default function Template({locale}) {
         }
     ]
     return <section>
-        <Container >
-            <ul css={[style.templates]} className="grid grid-cols-4 gap-4 justify-center ">
+        <Container tw="mt-20 mb-20">
+            <ul css={[style.templates]} className="grid grid-cols-4 gap-4 justify-center  mt-20">
                 {data1.map((item, index) => {
                     return <li key={index}
                                onMouseOver={() => {
