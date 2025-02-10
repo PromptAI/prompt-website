@@ -61,7 +61,8 @@ const ParallaxLayers = ({ layers }) => {
             style={{
                 perspective: "1000px",
                 transformStyle: "preserve-3d",
-                height: "100%"
+                height: "100%",
+                filter: 'drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15))'  // 将阴影效果添加到容器上
             }}
         >
             {layers.map((layer, index) => (

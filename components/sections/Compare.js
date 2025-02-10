@@ -15,7 +15,7 @@ function CompareLayout({filesData}) {
 
     return (
         <div
-            tw="w-full max-w-4xl flex border rounded-lg overflow-hidden h-[550px] backdrop-blur-sm bg-white/80 shadow-[0_0_15px_rgba(66,153,225,0.1)] border-[#e1e4e8]">
+            tw="w-full max-w-4xl flex border rounded-lg overflow-hidden h-[550px] backdrop-blur-sm bg-white/80 shadow-[0_4px_20px_-2px_rgba(66,153,225,0.18),0_0_15px_-3px_rgba(66,153,225,0.2)] border-[#e1e4e8]">
             {/* 左侧软件切换按钮 */}
             <div tw="w-1/5 border-r border-[#e1e4e8] p-2 bg-gray-50/50 backdrop-blur-sm flex flex-col gap-2">
                 {softwareList.map((software, index) => (
