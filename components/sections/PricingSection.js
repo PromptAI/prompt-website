@@ -13,7 +13,7 @@ const MoneyUnit = ({ money, unit }) => (
     <div tw="h-10">
       <p tw="m-0 text-4xl font-medium">{money}</p>
     </div>
-    <span tw="opacity-80">/{unit}</span>
+    {/*<span tw="opacity-80">/{unit}</span>*/}
   </div>
 );
 
@@ -33,9 +33,9 @@ const PricingCard = ({
     >
       <div tw="space-y-8">
         <div tw="space-y-4">
-          <span tw="font-medium opacity-60">{title}</span>
+          {/*<span tw="font-medium opacity-60">{title}</span>*/}
           {customMoney && customMoney}
-          {!customMoney && <MoneyUnit money={money} unit={t`month`} />}
+          {!customMoney && <MoneyUnit money={money} unit={""} />}
         </div>
         <ul tw="m-0 space-y-2">
           {items.map((item) => (
@@ -79,10 +79,6 @@ export default function PricingSection({ appOrigin, locale, defaultActive }) {
   );
   const premises0 = useMemo(
     () => buildItems(3, "pricing.on-premises.0.feature").map((k) => t`${k}`),
-    [t]
-  );
-  const premises1 = useMemo(
-    () => buildItems(3, "pricing.on-premises.1.feature").map((k) => t`${k}`),
     [t]
   );
   const premises2 = useMemo(
@@ -133,22 +129,6 @@ export default function PricingSection({ appOrigin, locale, defaultActive }) {
               >
                 <Button tw="h-10 w-full rounded-md">{t`pricing.on-premises.0.button`}</Button>
               </Link>
-            </PricingCard>
-            <PricingCard
-              title={t`pricing.on-premises.1`}
-              items={premises1}
-              money={t`pricing.on-premises.1.money.0`}
-            >
-              <div>
-                <Link
-                  target="_blank"
-                  href={`${appOrigin}/login`}
-                  onMouseDown={() => track("login")}
-                >
-                  <Button tw="h-10 w-full rounded-md">{t`pricing.on-premises.1.button`}</Button>
-                </Link>
-                {/*<p tw="m-0 text-center mt-2 px-4">{t`pricing.professional.tip`}</p>*/}
-              </div>
             </PricingCard>
             <PricingCard
               title={t`pricing.on-premises.2`}

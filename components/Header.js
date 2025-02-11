@@ -122,9 +122,7 @@ export default function Header({
                     onMouseDown={() => track("document")}
                     target="_blank"
                     href={
-                      deployType === "normal"
-                          ? `${docOrigin}/docs/${locale}/overview/`
-                          : `${docOrigin}/docs/overview/`
+                      docOrigin
                     }
                 >
                   {t`nav.document`}
@@ -151,13 +149,6 @@ export default function Header({
                     onMouseDown={() => track("contactus")}
                     href={`/${locale}/contact`}
                 >{t`nav.contactUs`}</Link>
-              </li>
-              <li>
-                <Link
-                    onMouseDown={() => track("about")}
-                    href={`${docOrigin}`}
-                    target="_blank"
-                >{t`nav.about`}</Link>
               </li>
               <li>
                 <Link

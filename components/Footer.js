@@ -56,9 +56,7 @@ export default function Footer({ appOrigin, docOrigin, deployType, locale }) {
                   target="_blank"
                   onMouseDown={() => track("document")}
                   href={
-                    deployType === "normal"
-                      ? `${docOrigin}/docs/${locale}/about/`
-                      : `${docOrigin}/docs/about/`
+                    docOrigin
                   }
                 >
                   {t`nav.document`}

@@ -15,13 +15,13 @@ function CompareLayout({filesData}) {
 
     return (
         <div
-            tw="w-full max-w-4xl flex border rounded-lg overflow-hidden h-[550px] backdrop-blur-sm bg-white/80 shadow-[0_4px_20px_-2px_rgba(66,153,225,0.18),0_0_15px_-3px_rgba(66,153,225,0.2)] border-[#e1e4e8]">
-            {/* 左侧软件切换按钮 */}
-            <div tw="w-1/5 border-r border-[#e1e4e8] p-2 bg-gray-50/50 backdrop-blur-sm flex flex-col gap-2">
+            tw="w-full max-w-4xl flex flex-col border rounded-lg overflow-hidden h-[550px] backdrop-blur-sm bg-white/80 shadow-[0_4px_20px_-2px_rgba(66,153,225,0.18),0_0_15px_-3px_rgba(66,153,225,0.2)] border-[#e1e4e8]">
+            {/* 顶部软件切换按钮 */}
+            <div tw="flex items-center gap-2 border-b border-[#e1e4e8] p-3 bg-gray-50/50 backdrop-blur-sm">
                 {softwareList.map((software, index) => (
                     <button
                         key={index}
-                        tw="block text-left px-3 py-2 rounded-lg text-sm transition-all duration-200"
+                        tw="block text-left px-4 py-2.5 rounded-lg text-base font-medium transition-all duration-200"
                         css={[
                             activeSoftware === software
                                 ? tw`bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md`
@@ -30,7 +30,7 @@ function CompareLayout({filesData}) {
                         onClick={() => {
                             setActiveSoftware(software);
                             setActiveFile(Object.keys(filesData[software])[0]);
-                            setCopyStatus('Copy');  // 重置复制状态
+                            setCopyStatus('Copy');
                         }}
                     >
                         {software}
@@ -38,8 +38,8 @@ function CompareLayout({filesData}) {
                 ))}
             </div>
 
-            {/* 右侧内容区域 */}
-            <div tw="w-4/5 flex flex-col">
+            {/* 内容区域 */}
+            <div tw="flex-1 flex flex-col">
                 {/* 顶部文件选择 */}
                 <div tw="flex items-center justify-between border-b border-[#e1e4e8] p-2 bg-gray-50/50 backdrop-blur-sm">
                     <div tw="flex space-x-2">
