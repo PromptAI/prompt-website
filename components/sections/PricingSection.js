@@ -78,11 +78,11 @@ export default function PricingSection({ appOrigin, locale, defaultActive }) {
     [t]
   );
   const premises0 = useMemo(
-    () => buildItems(3, "pricing.on-premises.0.feature").map((k) => t`${k}`),
+    () => buildItems(4, "pricing.on-premises.0.feature").map((k) => t`${k}`),
     [t]
   );
   const premises2 = useMemo(
-    () => buildItems(3, "pricing.on-premises.2.feature").map((k) => t`${k}`),
+    () => buildItems(1, "pricing.on-premises.2.feature").map((k) => t`${k}`),
     [t]
   );
   return (
