@@ -14,10 +14,10 @@ export default function Banner({appOrigin, locale}) {
 
     return (
         <section
-            tw="bg-cover bg-no-repeat [background-position-y: bottom] -mt-[4.5rem] [margin-left: -1px]">
+            tw="bg-cover bg-no-repeat [background-position-y: bottom] -mt-[4.5rem] [margin-left: -1px] pt-24">
             <Container tw="flex flex-col p-5 pb-10 text-center text-lg">
                 <div tw="mb-8 h-screen">
-                    <ParallaxLayers layers={layers} />
+                    <ParallaxLayers layers={layers}/>
                 </div>
                 <div tw="flex-1 min-w-0 flex flex-col gap-2 px-5 pb-3">
                     <h2 tw="[font-weight: 500] whitespace-pre-wrap leading-snug text-5xl">
@@ -42,10 +42,7 @@ export default function Banner({appOrigin, locale}) {
                             </Link>{" "}
                         </h2>
                     )}
-
                 </div>
-
-
                 {locale === "zh" && (
                     <div tw="w-3/4 mx-auto mt-8">
                         <Video
