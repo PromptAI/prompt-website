@@ -13,20 +13,14 @@ function CompareLayout({filesData}) {
     const [activeFile, setActiveFile] = useState(Object.keys(filesData[activeSoftware])[0]);
     const [copyStatus, setCopyStatus] = useState('Copy');  // 添加复制状态
 
-    return (
-        <div
+    return (<div
             tw="w-full max-w-4xl flex flex-col border rounded-lg overflow-hidden h-[550px] backdrop-blur-sm bg-white/80 shadow-[0_4px_20px_-2px_rgba(66,153,225,0.18),0_0_15px_-3px_rgba(66,153,225,0.2)] border-[#e1e4e8]">
             {/* 顶部软件切换按钮 */}
             <div tw="flex items-center gap-2 border-b border-[#e1e4e8] p-3 bg-gray-50/50 backdrop-blur-sm">
-                {softwareList.map((software, index) => (
-                    <button
+                {softwareList.map((software, index) => (<button
                         key={index}
                         tw="block text-left px-4 py-2.5 rounded-lg text-base font-medium transition-all duration-200"
-                        css={[
-                            activeSoftware === software
-                                ? tw`bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md`
-                                : tw`hover:bg-blue-50 hover:shadow-sm`
-                        ]}
+                        css={[activeSoftware === software ? tw`bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md` : tw`hover:bg-blue-50 hover:shadow-sm`]}
                         onClick={() => {
                             setActiveSoftware(software);
                             setActiveFile(Object.keys(filesData[software])[0]);
@@ -34,8 +28,7 @@ function CompareLayout({filesData}) {
                         }}
                     >
                         {software}
-                    </button>
-                ))}
+                    </button>))}
             </div>
 
             {/* 内容区域 */}
@@ -44,23 +37,17 @@ function CompareLayout({filesData}) {
                 <div
                     tw="flex items-center justify-between border-b border-[#e1e4e8] p-2 bg-gray-50/50 backdrop-blur-sm">
                     <div tw="flex space-x-2">
-                        {Object.keys(filesData[activeSoftware]).map((file, index) => (
-                            <button
+                        {Object.keys(filesData[activeSoftware]).map((file, index) => (<button
                                 key={index}
                                 tw="block text-left px-3 py-2 rounded-lg text-sm transition-all duration-200"
-                                css={[
-                                    activeFile === file
-                                        ? tw`bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md`
-                                        : tw`hover:bg-blue-50 hover:shadow-sm`
-                                ]}
+                                css={[activeFile === file ? tw`bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md` : tw`hover:bg-blue-50 hover:shadow-sm`]}
                                 onClick={() => {
                                     setActiveFile(file);
                                     setCopyStatus('Copy');  // 重置复制状态
                                 }}
                             >
                                 {file}
-                            </button>
-                        ))}
+                            </button>))}
                     </div>
 
                     <button
@@ -81,42 +68,29 @@ function CompareLayout({filesData}) {
                     <Highlight
                         theme={themes.github}
                         code={filesData[activeSoftware][activeFile]}
-                        language={activeFile.endsWith('.js') ? 'javascript' :
-                            activeFile.endsWith('.ts') ? 'typescript' :
-                                activeFile.endsWith('.yml') ? 'yaml' :
-                                    activeFile.endsWith('.py') ? 'python' :
-                                        activeFile.endsWith('.css') ? 'css' :
-                                            activeFile.endsWith('.scss') ? 'scss' : 'plaintext'}
+                        language={activeFile.endsWith('.js') ? 'javascript' : activeFile.endsWith('.ts') ? 'typescript' : activeFile.endsWith('.yml') ? 'yaml' : activeFile.endsWith('.py') ? 'python' : activeFile.endsWith('.css') ? 'css' : activeFile.endsWith('.scss') ? 'scss' : 'plaintext'}
                     >
                         {({className, style, tokens, getLineProps, getTokenProps}) => (
-                            <pre tw="whitespace-pre-wrap break-all" className={className} style={style}>
-                {tokens.map((line, i) => (
-                    <div key={i} {...getLineProps({line, key: i})}>
-                        {line.map((token, key) => (
-                            <span key={key} {...getTokenProps({token, key})} />
-                        ))}
-                    </div>
-                ))}
-            </pre>
-                        )}
+                            <pre tw="break-words" className={className} style={style}>
+                {tokens.map((line, i) => (<div key={i} {...getLineProps({line, key: i})}>
+                        {line.map((token, key) => (<span key={key} {...getTokenProps({token, key})} />))}
+                    </div>))}
+            </pre>)}
                     </Highlight>
                 </div>
 
             </div>
-        </div>
-    );
+        </div>);
 }
 
 export default function Compare() {
     const micaCode = MicaCode;
     const others = CompareCode;
 
-    return (
-        <section tw="bg-cover bg-no-repeat pt-[4.5rem] -mt-[4.5rem]">
+    return (<section tw="bg-cover bg-no-repeat pt-[4.5rem] -mt-[4.5rem]">
             <Container tw="flex flex-row items-center p-5 pb-10 gap-10">
                 <CompareLayout filesData={micaCode}/>
                 <CompareLayout filesData={others}/>
             </Container>
-        </section>
-    );
+        </section>);
 }
