@@ -51,7 +51,7 @@ function CompareLayout({filesData}) {
                     </div>
 
                     <button
-                        tw="px-2.5 py-1 text-xs rounded-md text-gray-600 transition-all duration-200 
+                        tw="px-2.5 py-1 text-xs rounded-md text-gray-600 transition-all duration-200
                            border border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                         onClick={() => {
                             navigator.clipboard.writeText(filesData[activeSoftware][activeFile])
@@ -62,22 +62,36 @@ function CompareLayout({filesData}) {
                         {copyStatus}
                     </button>
                 </div>
-
                 {/* 代码显示区 */}
                 <div tw="relative flex-1 p-4 text-sm bg-[#f6f8fa] overflow-y-auto max-h-[500px]">
                     <Highlight
                         theme={themes.github}
                         code={filesData[activeSoftware][activeFile]}
-                        language={activeFile.endsWith('.js') ? 'javascript' : activeFile.endsWith('.ts') ? 'typescript' : activeFile.endsWith('.yml') ? 'yaml' : activeFile.endsWith('.py') ? 'python' : activeFile.endsWith('.css') ? 'css' : activeFile.endsWith('.scss') ? 'scss' : 'plaintext'}
+                        language={activeFile.endsWith('.js') ? 'javascript' :
+                            activeFile.endsWith('.ts') ? 'typescript' :
+                                activeFile.endsWith('.yml') ? 'yaml' :
+                                    activeFile.endsWith('.py') ? 'python' :
+                                        activeFile.endsWith('.css') ? 'css' :
+                                            activeFile.endsWith('.scss') ? 'scss' : 'plaintext'}
                     >
                         {({className, style, tokens, getLineProps, getTokenProps}) => (
-                            <pre tw="break-words" className={className} style={style}>
-                {tokens.map((line, i) => (<div key={i} {...getLineProps({line, key: i})}>
-                        {line.map((token, key) => (<span key={key} {...getTokenProps({token, key})} />))}
-                    </div>))}
-            </pre>)}
+                            <pre
+                                tw="break-words overflow-x-auto"
+                                className={className}
+                                style={{ ...style, ineHeight: '1.5', paddingBottom: '30px' }} // 增加底部填充，确保最后一行显示
+                            >
+                {tokens.map((line, i) => (
+                    <div key={i} {...getLineProps({line, key: i})}>
+                        {line.map((token, key) => (
+                            <span key={key} {...getTokenProps({token, key})} />
+                        ))}
+                    </div>
+                ))}
+            </pre>
+                        )}
                     </Highlight>
                 </div>
+
 
             </div>
         </div>);
