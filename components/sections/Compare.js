@@ -41,7 +41,8 @@ function CompareLayout({filesData}) {
             {/* 内容区域 */}
             <div tw="flex-1 flex flex-col">
                 {/* 顶部文件选择 */}
-                <div tw="flex items-center justify-between border-b border-[#e1e4e8] p-2 bg-gray-50/50 backdrop-blur-sm">
+                <div
+                    tw="flex items-center justify-between border-b border-[#e1e4e8] p-2 bg-gray-50/50 backdrop-blur-sm">
                     <div tw="flex space-x-2">
                         {Object.keys(filesData[activeSoftware]).map((file, index) => (
                             <button
@@ -76,8 +77,7 @@ function CompareLayout({filesData}) {
                 </div>
 
                 {/* 代码显示区 */}
-                <div tw="relative flex-1 p-4 text-sm bg-[#f6f8fa] overflow-auto">
-
+                <div tw="relative flex-1 p-4 text-sm bg-[#f6f8fa] overflow-y-auto max-h-[500px]">
                     <Highlight
                         theme={themes.github}
                         code={filesData[activeSoftware][activeFile]}
@@ -89,18 +89,19 @@ function CompareLayout({filesData}) {
                                             activeFile.endsWith('.scss') ? 'scss' : 'plaintext'}
                     >
                         {({className, style, tokens, getLineProps, getTokenProps}) => (
-                            <pre tw="whitespace-pre-wrap" className={className} style={style}>
-                                {tokens.map((line, i) => (
-                                    <div {...getLineProps({line, key: i})}>
-                                        {line.map((token, key) => (
-                                            <span {...getTokenProps({token, key})} />
-                                        ))}
-                                    </div>
-                                ))}
-                            </pre>
+                            <pre tw="whitespace-pre-wrap break-all" className={className} style={style}>
+                {tokens.map((line, i) => (
+                    <div key={i} {...getLineProps({line, key: i})}>
+                        {line.map((token, key) => (
+                            <span key={key} {...getTokenProps({token, key})} />
+                        ))}
+                    </div>
+                ))}
+            </pre>
                         )}
                     </Highlight>
                 </div>
+
             </div>
         </div>
     );
