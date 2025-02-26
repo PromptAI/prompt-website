@@ -14,8 +14,8 @@ export default function Banner({appOrigin, locale}) {
 
     return (
         <section
-            tw="bg-cover bg-no-repeat [background-position-y: bottom] -mt-[4.5rem] [margin-left: -1px] pt-24">
-            <Container tw="flex flex-col p-5 pb-10 text-center text-lg">
+            tw="bg-cover bg-no-repeat [background-position-y: bottom] -mt-[4.5rem] [margin-left: -1px] pt-8">
+            <Container tw="flex flex-col pb-10 text-center text-lg">
                 <div tw="mb-8 h-screen">
                     <ParallaxLayers layers={layers}/>
                 </div>

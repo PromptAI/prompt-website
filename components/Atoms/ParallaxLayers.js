@@ -62,7 +62,8 @@ const ParallaxLayers = ({ layers }) => {
                 perspective: "1000px",
                 transformStyle: "preserve-3d",
                 height: "100%",
-                filter: 'drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15))'  // 将阴影效果添加到容器上
+                width: "100%",
+                filter: 'drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15))'
             }}
         >
             {layers.map((layer, index) => (
@@ -70,7 +71,7 @@ const ParallaxLayers = ({ layers }) => {
                     key={index}
                     ref={(el) => (layersRef.current[index] = el)}
                     src={layer.src}
-                    tw="absolute"
+                    tw="absolute max-h-[80%] w-auto object-contain"
                     alt={`Layer ${index + 1}`}
                     style={{
                         zIndex: layers.length - index,
