@@ -128,14 +128,14 @@ export default function Header({
                   {t`nav.document`}
                 </Link>
               </li>
-              <li>
-                <Link
-                    onMouseDown={() => track("study_example")}
-                    href={`/${locale}/examples`}
-                >
-                  {t`nav.example`}
-                </Link>
-              </li>
+              {/*<li>*/}
+              {/*  <Link*/}
+              {/*      onMouseDown={() => track("study_example")}*/}
+              {/*      href={`/${locale}/examples`}*/}
+              {/*  >*/}
+              {/*    {t`nav.example`}*/}
+              {/*  </Link>*/}
+              {/*</li>*/}
               <li>
                 <Link
                     onMouseDown={() => track("price")}
@@ -153,7 +153,7 @@ export default function Header({
               <li>
                 <Link
                     onMouseDown={() => track("PromptDialog 1.0")}
-                    href={`https://github.com/PromptAI/us-doc-rasa`}
+                    href={`https://github.com/PromptAI/promptdialog1.0`}
                     target={"_blank"}
                 >{'PromptDialog 1.0'}</Link>
               </li>

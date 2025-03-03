@@ -8,6 +8,7 @@ import Introduction from "~/components/sections/Introduction";
 import Feature from "~/components/sections/Feature";
 import useTranslate from "~/hooks/useTranslate";
 import Compare from "~/components/sections/Compare";
+import FloatLayer from "~/components/sections/FloatLayer";
 
 export default function Home({cases, examples, ...rest}) {
     const t = useTranslate();
@@ -32,8 +33,8 @@ export default function Home({cases, examples, ...rest}) {
                 <Banner {...rest} />
                 <Compare/>
                 {rest.deployType === "normal" && <Case value={cases}/>}
-                {/*<Introduction {...rest} />*/}
                 <Feature/>
+                <FloatLayer />
             </Main>
             <Footer {...rest} />
         </>
