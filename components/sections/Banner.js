@@ -19,18 +19,30 @@ export default function Banner({appOrigin, locale}) {
                     {locale === "zh" && <h2 tw="m-0">{t`banner.description.extends`}</h2>}
                     {locale === "en" && (
                         <h2 tw="m-0">
+                            Built on
                             <Link
-                                href="/en/pricing/on-cloud"
+                                target={"_blank"}
+                                href="https://mica-labs.github.io/"
                                 tw="text-black  text-orange-400"
                             >
-                                on cloud
+                                {" "}  Mica
                             </Link>{" "}
-                            or{" "}
+                            , free
+
                             <Link
-                                href="/en/pricing/premises"
-                                tw="text-black text-rose-400"
+                                target={"_blank"}
+                                href="/en/product/on-cloud/"
+                                tw="text-black  text-rose-400"
                             >
-                                premises
+                                {" "}  on cloud
+                            </Link>{" "}
+                             or
+                            <Link
+                                target={"_blank"}
+                                href="/en/product/premises/"
+                                tw="text-black  text-green-400"
+                            >
+                                {" "}   on-prem.
                             </Link>{" "}
                         </h2>
                     )}

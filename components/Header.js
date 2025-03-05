@@ -152,13 +152,6 @@ export default function Header({
               </li>
               <li>
                 <Link
-                    onMouseDown={() => track("PromptDialog 1.0")}
-                    href={`https://github.com/PromptAI/promptdialog1.0`}
-                    target={"_blank"}
-                >{'PromptDialog 1.0'}</Link>
-              </li>
-              <li>
-                <Link
                     onMouseDown={() => track("login")}
                     target="_blank"
                     href={`${appOrigin}/login`}
