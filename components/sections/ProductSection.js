@@ -137,9 +137,7 @@ export default function ProductSection({ appOrigin, locale, defaultActive }) {
                 <div tw="h-10 flex items-end justify-center">
                   <a
                     tw="m-0 text-3xl font-medium underline cursor-pointer"
-                    href={`mailto:${
-                      locale === "zh" ? "info@promptai.cn" : "info@promptai.us"
-                    }`}
+                    href={'/en/contact/'}
                   >
                     {t`product.on-premises.2.contact.us`}
                   </a>

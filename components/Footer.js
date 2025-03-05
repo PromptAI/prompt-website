@@ -19,9 +19,9 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
     const track = useTrackEvent("link statistics", "click");
     const t = useTranslate();
     return (
-        <footer tw="bg-neutral-800 p-4">
-            <Container tw="h-full flex flex-col px-4">
-                <div tw="flex-1 min-h-0 flex justify-between items-stretch">
+        <footer tw="min-h-[8rem] bg-neutral-800 py-4">
+            <Container tw="flex flex-col px-4">
+                <div tw="flex justify-between items-start flex-wrap gap-4">
                     <div tw="flex-col justify-between">
                         <Link onMouseDown={() => track("home")} href="/">
                               <span tw="text-3xl text-white [line-height:4.2rem]">
@@ -59,7 +59,7 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                         {locale === "zh" && (
                             <div>
                                 <Image
-                                    tw="mb-5"
+                                    tw="mb-2"
                                     src={`${appOrigin}/api/blobs/group/qrcode?type=wechat`}
                                     width="120"
                                     height="120"
@@ -68,9 +68,9 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                             </div>
                         )}
                     </div>
-                    <div tw={"flex flex-row gap-4"}>
+                    <div tw="flex flex-row gap-4">
                         <div>
-                            <div tw={"flex flex-row gap-20"}>
+                            <div tw="flex flex-row gap-20">
                                 <div>
                                     <p tw="text-lg text-white mb-0">{t`footer.subtitle`}</p>
                                     <Link
@@ -82,7 +82,7 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                                         {locale === "zh" ? "info@promptai.cn" : "info@promptai.us"}
                                     </Link>
                                 </div>
-                                <ul css={style.footerNav} tw={"mt-2"}>
+                                <ul css={style.footerNav} tw="mt-2">
                                     {locale == "en" && (
                                         <>
                                             <li>
@@ -115,9 +115,7 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                             </div>
                         </div>
                     </div>
-                    <div></div>
                 </div>
-
             </Container>
         </footer>
     );

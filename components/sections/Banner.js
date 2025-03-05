@@ -30,7 +30,6 @@ export default function Banner({appOrigin, locale}) {
                             , free
 
                             <Link
-                                target={"_blank"}
                                 href="/en/product/on-cloud/"
                                 tw="text-black  text-rose-400"
                             >
@@ -38,7 +37,6 @@ export default function Banner({appOrigin, locale}) {
                             </Link>{" "}
                              or
                             <Link
-                                target={"_blank"}
                                 href="/en/product/premises/"
                                 tw="text-black  text-green-400"
                             >
