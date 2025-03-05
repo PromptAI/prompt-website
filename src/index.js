@@ -4,7 +4,6 @@ import Header from "~/components/Header";
 import Footer from "~/components/Footer";
 import Banner from "~/components/sections/Banner";
 import Case from "~/components/sections/Case";
-import Introduction from "~/components/sections/Introduction";
 import Feature from "~/components/sections/Feature";
 import useTranslate from "~/hooks/useTranslate";
 import Compare from "~/components/sections/Compare";

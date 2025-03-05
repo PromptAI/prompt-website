@@ -2,18 +2,18 @@ import Head from "next/head";
 import Main from "~/components/Atoms/Main";
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
-import PricingSection from "~/components/sections/PricingSection";
+import ProductSection from "~/components/sections/ProductSection";
 
-export default function PricingPage(props) {
+export default function ProductPage(props) {
   return (
     <>
       <Head>
-        <title>PROMPT AI - Pricing</title>
+        <title>PROMPT AI - Product</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header white {...props} />
       <Main>
-        <PricingSection {...props} />
+        <ProductSection {...props} />
       </Main>
       <Footer {...props} />
     </>

@@ -30,8 +30,7 @@ meta:
   contains:
   - weather_agent
   steps:
-  - bot: Hello, I am your intelligent assistant. What can I do for you?
-  - call: weather_agent
+  - bot: Do you want to know the weather? 
   fallback:
     policy: Lame! We got a glitch, please try again later.
 

@@ -1,5 +1,5 @@
 import I18nProvider from "~/provider/i18nProvider";
-import PricingPage from "~/src/pricing";
+import ProductPage from "~/src/product";
 
 export const getStaticPaths = () => {
   return {
@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
 export default function LocaleHome(props) {
   return (
     <I18nProvider locale={props.locale}>
-      <PricingPage {...props} defaultActive="on-premises" />
+      <ProductPage {...props} defaultActive="on-premises" />
     </I18nProvider>
   );
 }
