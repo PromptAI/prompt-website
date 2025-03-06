@@ -165,8 +165,10 @@ export default function ProductSection({ appOrigin, locale, defaultActive }) {
         <p>
           <span tw="font-medium">(2)</span> {t`product.other.1`}
         </p>
+      </div>
+      <div tw="[font-weight: 500] whitespace-pre-wrap leading-snug text-xl">
         <p>
-          <span tw="font-medium">(3)</span> {t`product.other.2`}
+         {t`product.other.2`}
           <a
               tw="text-blue-600 ml-2 cursor-pointer underline"
               href={``}

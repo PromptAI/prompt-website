@@ -18,7 +18,7 @@ export default function Banner({appOrigin, locale}) {
                     <h2 tw="m-0">{t`banner.description`}</h2>
                     {locale === "zh" && <h2 tw="m-0">{t`banner.description.extends`}</h2>}
                     {locale === "en" && (
-                        <h2 tw="m-0">
+                        <h2 tw="m-0 mt-2">
                             Built on
                             <Link
                                 target={"_blank"}
@@ -35,7 +35,7 @@ export default function Banner({appOrigin, locale}) {
                             >
                                 {" "}  on cloud
                             </Link>{" "}
-                             or
+                             and
                             <Link
                                 href="/en/product/premises/"
                                 tw="text-black  text-green-400"
