@@ -17,7 +17,7 @@ const MoneyUnit = ({ money, unit }) => (
   </div>
 );
 
-const ProductCard = ({
+const StudioCard = ({
   title,
   money,
   customMoney,
@@ -70,7 +70,7 @@ const Content = (props) => (
 const buildItems = (length, prefix) =>
   new Array(length).fill(0).map((_, i) => `${prefix}.${i}`);
 
-export default function ProductSection({ appOrigin, locale, defaultActive }) {
+export default function StudioSection({ appOrigin, locale, defaultActive }) {
   const t = useTranslate();
   const track = useTrackEvent("link statistics", "click");
   const cloud = useMemo(
@@ -91,16 +91,16 @@ export default function ProductSection({ appOrigin, locale, defaultActive }) {
       <Tabs defaultValue={defaultActive}>
         <TabsList tw="flex justify-center items-center gap-4">
           <Trigger value="cloud" asChild>
-            <Link href={`/${locale}/product/on-cloud`}>{t`product.cloud`}</Link>
+            <Link href={`/${locale}/studio/on-cloud`}>{t`product.cloud`}</Link>
           </Trigger>
           <Trigger value="on-premises" asChild>
             <Link
-              href={`/${locale}/product/premises`}
+              href={`/${locale}/studio/premises`}
             >{t`product.on-premises`}</Link>
           </Trigger>
         </TabsList>
         <Content value="cloud">
-          <ProductCard
+          <StudioCard
             title={t`product.cloud`}
             money={t`product.cloud.money`}
             items={cloud}
@@ -113,11 +113,11 @@ export default function ProductSection({ appOrigin, locale, defaultActive }) {
             >
               <Button tw="h-10 w-full rounded-md">{t`product.cloud.button`}</Button>
             </Link>
-          </ProductCard>
+          </StudioCard>
         </Content>
         <Content value="on-premises">
           <div tw="flex justify-center flex-wrap gap-4 w-full">
-            <ProductCard
+            <StudioCard
               title={t`product.on-premises.0`}
               money={t`product.on-premises.0.money`}
               items={premises0}
@@ -129,8 +129,8 @@ export default function ProductSection({ appOrigin, locale, defaultActive }) {
               >
                 <Button tw="h-10 w-full rounded-md">{t`product.on-premises.0.button`}</Button>
               </Link>
-            </ProductCard>
-            <ProductCard
+            </StudioCard>
+            <StudioCard
               title={t`product.on-premises.2`}
               items={premises2}
               customMoney={
@@ -145,7 +145,7 @@ export default function ProductSection({ appOrigin, locale, defaultActive }) {
               }
             >
               <Button tw="h-10 w-full rounded-md invisible">-</Button>
-            </ProductCard>
+            </StudioCard>
           </div>
         </Content>
       </Tabs>

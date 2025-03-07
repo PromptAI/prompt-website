@@ -138,10 +138,10 @@ export default function Header({
               {/*</li>*/}
               <li>
                 <Link
-                    onMouseDown={() => track("price")}
-                    href={`/${locale}/product`}
+                    onMouseDown={() => track("studio")}
+                    href={`/${locale}/studio`}
                 >
-                  {t`nav.product`}
+                  {t`nav.studio`}
                 </Link>
               </li>
               <li>
