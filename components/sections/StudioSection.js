@@ -171,14 +171,14 @@ export default function StudioSection({ appOrigin, locale, defaultActive }) {
          {t`product.other.2`}
           <a
               tw="text-blue-600 ml-2 cursor-pointer underline"
-              href={``}
+              href={`https://github.com/PromptAI/promptdialog1.0/blob/main/docs/local_deployment.md`}
           >
             {t`product.other.2.link.0`}
           </a>
 
           <a
               tw="text-blue-600 ml-2 cursor-pointer underline"
-              href={``}
+              href={`https://github.com/PromptAI/promptdialog1.0`}
           >
             {t`product.other.2.link.1`}
           </a>
