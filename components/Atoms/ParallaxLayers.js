@@ -71,7 +71,7 @@ const ParallaxLayers = ({ layers }) => {
                     key={index}
                     ref={(el) => (layersRef.current[index] = el)}
                     src={layer.src}
-                    tw="absolute h-auto"
+                    tw="absolute "
                     alt={`Layer ${index + 1}`}
                     style={{
                         zIndex: layers.length - index,

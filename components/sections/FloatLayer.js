@@ -6,7 +6,7 @@ import ParallaxLayers from "~/components/Atoms/ParallaxLayers";
 
 const layers = [
     {src: "/images/t2.png","border":false, position: { right: '20px' } },
-    {src: "/images/t1.png","border":true},
+    {src: "/images/t3.png","border":true},
 ];
 
 export default function FloatLayer({appOrigin, locale}) {
