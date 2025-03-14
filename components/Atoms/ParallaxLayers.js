@@ -55,7 +55,7 @@ const ParallaxLayers = ({ layers }) => {
     }, [layers]);
 
     return (
-        <div 
+        <div
             ref={containerRef}
             tw="relative flex items-center justify-center overflow-visible"
             style={{
@@ -71,17 +71,20 @@ const ParallaxLayers = ({ layers }) => {
                     key={index}
                     ref={(el) => (layersRef.current[index] = el)}
                     src={layer.src}
-                    tw="absolute max-h-[100%] w-auto object-contain"
+                    tw="absolute h-auto"
                     alt={`Layer ${index + 1}`}
                     style={{
                         zIndex: layers.length - index,
                         transformStyle: "preserve-3d",
                         border: layer.border !== false ? '0.5px solid rgba(0, 0, 0, 0.03)' : 'none',
                         borderRadius: '8px',
-                        imageRendering: "crisp-edges",
-                        objectFit: "contain",
+                        imageRendering: "auto", // 修改为 auto，让浏览器自动选择最佳的渲染方式
                         willChange: "transform",
-                        backfaceVisibility: "hidden"
+                        backfaceVisibility: "hidden",
+                        top: layer.position?.top || 'auto',
+                        bottom: layer.position?.bottom || 'auto',
+                        left: layer.position?.left || 'auto',
+                        right: layer.position?.right || 'auto'
                     }}
                 />
             ))}
