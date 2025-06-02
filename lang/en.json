@@ -60,6 +60,8 @@
   "feature.3.description": "Four types of agents—knowledge base, LLM, flow, and ensemble agents—are predefined for your customization. FAQs and unstructured content stored in Word, PDF, and HTML  can be directly indexed for question answering without annotation.",
   "feature.4.title": "Fast Debugging",
   "feature.4.description": "It is the first system of its kind to embed the software development process into chatbot design and debugging. Each agent can be tested individually or together to facilitate debugging.",
+  "float.layer.1.title": "PromptDialog Studio",
+  "float.layer.2.title": "All-in-one design environment",
   "contactus.title": "Contact Us",
   "contactus.success": "We have received your message, thank you!",
   "contactus.error": "Error, please try again later...",

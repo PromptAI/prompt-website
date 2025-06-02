@@ -21,7 +21,6 @@ export default function Banner({docOrigin, appOrigin, locale}) {
                         <h2 tw="m-0 mt-2">
                             基于
                             <Link
-                                target={"_blank"}
                                 href="https://mica-labs.github.io/"
                                 tw="text-black  text-orange-400"
                             >
@@ -29,16 +28,14 @@ export default function Banner({docOrigin, appOrigin, locale}) {
                             </Link>{" "}
                             构建，支持
                             <Link
-                                target={"_blank"}
-                                href={`${appOrigin}`}
+                                href="/zh/studio/on-cloud/"
                                 tw="text-black  text-rose-400"
                             >
                                 {" "} 云端
                             </Link>{" "}
                             和
                             <Link
-                                target={"_blank"}
-                                href={`${docOrigin}/docs/local_deployment/`}
+                                href="/zh/studio/premises/"
                                 tw="text-black  text-green-400"
                             >
                                 {" "} 本地
@@ -58,16 +55,14 @@ export default function Banner({docOrigin, appOrigin, locale}) {
                             , free
 
                             <Link
-                                target={"_blank"}
-                                href={`${appOrigin}`}
+                                href='/en/studio/on-cloud/'
                                 tw="text-black  text-rose-400"
                             >
                                 {" "} on cloud
                             </Link>{" "}
                             and
                             <Link
-                                target={"_blank"}
-                                href={`${docOrigin}/docs/local_deployment/`}
+                                href='/en/studio/premises/'
                                 tw="text-black  text-green-400"
                             >
                                 {" "} on-prem.

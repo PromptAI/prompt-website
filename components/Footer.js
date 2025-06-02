@@ -29,6 +29,17 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                               </span>
                         </Link>
                         <div tw="pb-0 mb-0">
+                            {locale === "zh" && (
+                                <div>
+                                    <Image
+                                        tw="mb-2"
+                                        src={`${appOrigin}/api/blobs/group/qrcode?type=wechat`}
+                                        width="120"
+                                        height="120"
+                                        alt="wechat"
+                                    ></Image>
+                                </div>
+                            )}
                             <a
                                 href={deployType === "normal" ? "https://beian.miit.gov.cn/" : "#"}
                                 tw="text-gray-500 text-sm"
@@ -36,6 +47,8 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                                 {t`footer.copyright.prefix`}
                                 {new Date().getFullYear()}
                                 {t`footer.copyright.subfix`}
+
+                                {" "}
                             </a>
 
                             {locale === "zh" && (
@@ -52,21 +65,11 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                                         height={14}
                                         tw="inline-block mr-1"
                                     />
-                                    浙ICP备2022024214号
+                                     浙ICP备2022024214号
                                 </a>
                             )}
                         </div>
-                        {locale === "zh" && (
-                            <div>
-                                <Image
-                                    tw="mb-2"
-                                    src={`${appOrigin}/api/blobs/group/qrcode?type=wechat`}
-                                    width="120"
-                                    height="120"
-                                    alt="wechat"
-                                ></Image>
-                            </div>
-                        )}
+
                     </div>
                     <div tw="flex flex-row gap-4">
                         <div>

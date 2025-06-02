@@ -18,8 +18,8 @@ export default function FloatLayer({appOrigin, locale}) {
             <Container tw="flex flex-col pb-10 pt-10 text-center text-lg">
                 <div tw="mb-8 h-screen flex flex-col">
                     <div tw={"[font-weight: 500] whitespace-pre-wrap leading-snug text-4xl"}>
-                        <p>PromptDialog Studio</p>
-                        <p>All-in-one design environment</p>
+                        <p>{t`float.layer.1.title`}</p>
+                        <p>{t`float.layer.2.title`}</p>
                     </div>
                     <div tw="flex-1 relative mt-16">
                         <ParallaxLayers layers={layers} />
