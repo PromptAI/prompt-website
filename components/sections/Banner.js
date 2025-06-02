@@ -4,7 +4,7 @@ import Container from "~/components/Atoms/Container";
 import useTranslate from "~/hooks/useTranslate";
 import Video from "../Atoms/Video";
 
-export default function Banner({appOrigin, locale}) {
+export default function Banner({docOrigin, appOrigin, locale}) {
     const t = useTranslate();
 
     return (
@@ -16,7 +16,35 @@ export default function Banner({appOrigin, locale}) {
                         {t`banner.title`}
                     </h2>
                     <h2 tw="m-0">{t`banner.description`}</h2>
-                    {locale === "zh" && <h2 tw="m-0">{t`banner.description.extends`}</h2>}
+                    {locale === "zh" && (
+                        // 基于 Mica 构建，支持云端和本地免费使用。
+                        <h2 tw="m-0 mt-2">
+                            基于
+                            <Link
+                                target={"_blank"}
+                                href="https://mica-labs.github.io/"
+                                tw="text-black  text-orange-400"
+                            >
+                                {" "} Mica
+                            </Link>{" "}
+                            构建，支持
+                            <Link
+                                target={"_blank"}
+                                href={`${appOrigin}`}
+                                tw="text-black  text-rose-400"
+                            >
+                                {" "} 云端
+                            </Link>{" "}
+                            和
+                            <Link
+                                target={"_blank"}
+                                href={`${docOrigin}/docs/local_deployment/`}
+                                tw="text-black  text-green-400"
+                            >
+                                {" "} 本地
+                            </Link>{" "}免费使用。
+                        </h2>
+                    )}
                     {locale === "en" && (
                         <h2 tw="m-0 mt-2">
                             Built on
@@ -25,38 +53,28 @@ export default function Banner({appOrigin, locale}) {
                                 href="https://mica-labs.github.io/"
                                 tw="text-black  text-orange-400"
                             >
-                                {" "}  Mica
+                                {" "} Mica
                             </Link>{" "}
                             , free
 
                             <Link
-                                href="/en/product/on-cloud/"
+                                target={"_blank"}
+                                href={`${appOrigin}`}
                                 tw="text-black  text-rose-400"
                             >
-                                {" "}  on cloud
+                                {" "} on cloud
                             </Link>{" "}
-                             and
+                            and
                             <Link
-                                href="/en/product/premises/"
+                                target={"_blank"}
+                                href={`${docOrigin}/docs/local_deployment/`}
                                 tw="text-black  text-green-400"
                             >
-                                {" "}   on-prem.
+                                {" "} on-prem.
                             </Link>{" "}
                         </h2>
                     )}
                 </div>
-                {locale === "zh" && (
-                    <div tw="w-3/4 mx-auto mt-8">
-                        <Video
-                            src={`/examples/en/IT-Helpdesk-R1.mp4`}
-                            tw="shadow-2xl rounded-md shadow-gray-400 p-2"
-                        />
-                    </div>
-                )}
-
-                {/* Link to Prompt - AI templates */}
-                {/*暂时去掉视频*/}
-                {/*{locale === "en" && <CarouselVideios />}*/}
             </Container>
         </section>
     );
