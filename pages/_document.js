@@ -36,24 +36,26 @@ export default class AppDocument extends Document {
 
   render() {
     return (
-      <Html>
-        <Head>
-          <style
-            data-emotion-css={this.props.ids?.join(" ")}
-            dangerouslySetInnerHTML={{ __html: this.props.css }}
-          />
-        </Head>
-        <script dangerouslySetInnerHTML={getAnalyticsTag()} />
-        <script
-          src="https://beamanalytics.b-cdn.net/beam.min.js"
-          data-token="6b5e52ca-458a-4262-8ab3-cd8e618d99ad"
-          async
-        ></script>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
+        <Html>
+            <Head>
+                <style
+                    data-emotion-css={this.props.ids?.join(" ")}
+                    dangerouslySetInnerHTML={{__html: this.props.css}}
+                />
+            </Head>
+            <script dangerouslySetInnerHTML={getAnalyticsTag()}/>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+            <script
+                src="https://beamanalytics.b-cdn.net/beam.min.js"
+                data-token="6b5e52ca-458a-4262-8ab3-cd8e618d99ad"
+                async
+            ></script>
+            <body>
+            <Main/>
+            <NextScript/>
+            </body>
+        </Html>
     );
   }
 }

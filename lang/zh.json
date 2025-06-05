@@ -17,7 +17,7 @@
   "footer.copyright.prefix": "ⓒ",
   "footer.copyright.subfix": " PROMPT AI.",
   "banner.title": "PromptDialog 2.0",
-  "banner.description": "一种基于代理型人工智能的聊天机器人方法",
+  "banner.description": "基于Agentic AI 的ChatBot",
   "banner.description.extends": "支持多轮对话",
   "introduction.part.conversation.subtitle": "可视化对话编辑器",
   "introduction.part.conversation.title": "立即设计和实现您的对话",
@@ -109,7 +109,7 @@
   "product.other.0.link.0": "联系我们",
   "product.other.1": "大语言模型（LLM）费用：使用您自己的 OpenAI API 密钥。",
   "product.professional.tip": "If you need the rasa version, please let us know.",
-  "product.other.2": "PromptDialog 1.0: ",
+  "product.other.2": "PromptDialog 1.0 for RASA: ",
   "product.other.2.link.0": "下载",
   "product.other.2.link.1": "帮助"
 }
