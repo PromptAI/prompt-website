@@ -87,7 +87,7 @@ export default function StudioSection({ appOrigin, locale, defaultActive }) {
   );
   return (
     <Container tw="px-4 pb-10 space-y-8">
-      <h2 tw="mb-0 font-medium mt-8">PromptDialog 2.0</h2>
+      <h2 tw="mb-0 font-medium mt-8">PromptDialog 2.0 for Mica</h2>
       <Tabs defaultValue={defaultActive}>
         <TabsList tw="flex justify-center items-center gap-4">
           <Trigger value="cloud" asChild>

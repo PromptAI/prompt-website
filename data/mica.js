@@ -39,14 +39,10 @@ main:
   - call: meta
     schedule: priority
 `,
-        "functions.py": `def get_weather(**kwargs):
-    location = kwargs.get("location")
+        "functions.py": `def get_weather(location):
     print(f"It's 25 degrees and sunny in {location} today")
     return
-def send_email(**kwargs):
-    recipient = kwargs.get("recipient")
-    subject = kwargs.get("subject")
-    body = kwargs.get("body")
+def send_email(recipient, subject, body):
     print("Sending email...")
     print(f"To: {recipient}")
     print(f"Subject: {subject}")
