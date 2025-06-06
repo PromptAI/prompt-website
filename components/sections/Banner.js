@@ -32,6 +32,7 @@ export default function Banner({docOrigin, appOrigin, locale}) {
                         <h2 tw="m-0 mt-2">
                             基于开源
                             <Link
+                                target={"_blank"}
                                 href="https://mica-labs.github.io/"
                                 tw="text-black  text-orange-400"
                             >
