@@ -8,6 +8,8 @@ import Feature from "~/components/sections/Feature";
 import useTranslate from "~/hooks/useTranslate";
 import Compare from "~/components/sections/Compare";
 import FloatLayer from "~/components/sections/FloatLayer";
+import Link from "next/link";
+import VersionLink from "~/components/sections/VerisonLink";
 
 export default function Home({cases, examples, ...rest}) {
     const t = useTranslate();
@@ -34,6 +36,7 @@ export default function Home({cases, examples, ...rest}) {
                 {rest.deployType === "normal" && <Case value={cases}/>}
                 <Feature/>
                 <FloatLayer />
+                <VersionLink/>
             </Main>
             <Footer {...rest} />
         </>

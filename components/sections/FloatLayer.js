@@ -2,6 +2,7 @@ import "twin.macro";
 import Container from "~/components/Atoms/Container";
 import useTranslate from "~/hooks/useTranslate";
 import ParallaxLayers from "~/components/Atoms/ParallaxLayers";
+import Link from "next/link";
 
 
 const layers = [
@@ -14,8 +15,8 @@ export default function FloatLayer({appOrigin, locale}) {
 
     return (
         <section
-            tw="bg-cover bg-no-repeat [background-position-y: bottom] -mt-[4.5rem] pb-8 [margin-left: -1px]">
-            <Container tw="flex flex-col pb-10 pt-10 text-center text-lg">
+            tw="bg-cover bg-no-repeat [background-position-y: bottom] -mt-[4.5rem]  [margin-left: -1px]">
+            <Container tw="flex flex-col  pt-10 text-center text-lg">
                 <div tw="mb-8 h-screen flex flex-col">
                     <div tw={"[font-weight: 500] whitespace-pre-wrap leading-snug text-4xl"}>
                         <p>{t`float.layer.1.title`}</p>
