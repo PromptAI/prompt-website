@@ -136,14 +136,14 @@ export default function Header({
               {/*    {t`nav.example`}*/}
               {/*  </Link>*/}
               {/*</li>*/}
-              <li>
-                <Link
-                    onMouseDown={() => track("studio")}
-                    href={`/${locale}/studio`}
-                >
-                  {t`nav.studio`}
-                </Link>
-              </li>
+              {/*<li>*/}
+              {/*  <Link*/}
+              {/*      onMouseDown={() => track("studio")}*/}
+              {/*      href={`/${locale}/studio`}*/}
+              {/*  >*/}
+              {/*    {t`nav.studio`}*/}
+              {/*  </Link>*/}
+              {/*</li>*/}
               <li>
                 <Link
                     onMouseDown={() => track("contactus")}
@@ -154,11 +154,20 @@ export default function Header({
                 <Link
                     onMouseDown={() => track("login")}
                     target="_blank"
-                    href={`${appOrigin}/login`}
+                    href={`https://github.com/PromptAI/PromptAI`}
                 >
-                  <Button tw="rounded">{t`nav.free2Use`}</Button>
+                  <Button tw="rounded">{t`nav.download`}</Button>
                 </Link>
               </li>
+              {/*<li>*/}
+              {/*  <Link*/}
+              {/*      onMouseDown={() => track("login")}*/}
+              {/*      target="_blank"*/}
+              {/*      href={`${appOrigin}/login`}*/}
+              {/*  >*/}
+              {/*    <Button tw="rounded">{t`nav.free2Use`}</Button>*/}
+              {/*  </Link>*/}
+              {/*</li>*/}
             </ul>
           </nav>
         </Container>
