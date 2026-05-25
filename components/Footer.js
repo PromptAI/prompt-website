@@ -88,24 +88,24 @@ export default function Footer({appOrigin, docOrigin, deployType, locale}) {
                                 <ul css={style.footerNav} tw="mt-2">
                                     {locale == "en" && (
                                         <>
-                                            <li>
-                                                <Link
-                                                    target="_blank"
-                                                    onMouseDown={() => track("privacie")}
-                                                    href="https://www.promptai.us/privacy.html"
-                                                >
-                                                    {t`nav.privacy`}
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    target="_blank"
-                                                    onMouseDown={() => track("privacie")}
-                                                    href="/term.html"
-                                                >
-                                                    {t`nav.term`}
-                                                </Link>
-                                            </li>
+                                            {/*<li>*/}
+                                            {/*    <Link*/}
+                                            {/*        target="_blank"*/}
+                                            {/*        onMouseDown={() => track("privacie")}*/}
+                                            {/*        href="https://www.promptai.us/privacy.html"*/}
+                                            {/*    >*/}
+                                            {/*        {t`nav.privacy`}*/}
+                                            {/*    </Link>*/}
+                                            {/*</li>*/}
+                                            {/*<li>*/}
+                                            {/*    <Link*/}
+                                            {/*        target="_blank"*/}
+                                            {/*        onMouseDown={() => track("privacie")}*/}
+                                            {/*        href="/term.html"*/}
+                                            {/*    >*/}
+                                            {/*        {t`nav.term`}*/}
+                                            {/*    </Link>*/}
+                                            {/*</li>*/}
                                         </>
                                     )}
                                     <li>
