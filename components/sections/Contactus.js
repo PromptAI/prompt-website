@@ -72,11 +72,9 @@ export default function Contactus({ appOrigin, locale }) {
           <p>
             <Link
               tw="px-0.5 bg-white text-blue-600"
-              href={`mailto:${
-                locale === "zh" ? "info@promptai.cn" : "info@promptai.us"
-              }`}
+              href={`mailto:info@promptai.us`}
             >
-              {locale === "zh" ? "info@promptai.cn" : "info@promptai.us"}
+                info@promptai.us
             </Link>
           </p>
         </div>
